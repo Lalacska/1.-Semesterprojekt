@@ -20,7 +20,8 @@ public class WaterController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        scaleY += risingSpeed;
-        gb.transform.localScale = new Vector3(gb.transform.localScale.x, scaleY, gb.transform.localScale.z);
+        //scaleY += risingSpeed;
+        //gb.transform.position = new Vector3(gb.transform.localScale.x, scaleY, gb.transform.localScale.z);
+        ////gb.transform.localScale = new Vector3(gb.transform.localScale.x, scaleY, gb.transform.localScale.z);
     }
 }
