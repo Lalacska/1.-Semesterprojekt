@@ -5373,6 +5373,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2831297195770122012, guid: 4e33c1644d26b454ba5753a1d6518ed5, type: 3}
+      propertyPath: m_LinearDamping
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5898712897018563041, guid: 4e33c1644d26b454ba5753a1d6518ed5, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.17009999
@@ -5429,6 +5433,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7802853902444202310, guid: 4e33c1644d26b454ba5753a1d6518ed5, type: 3}
+      propertyPath: speed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802853902444202310, guid: 4e33c1644d26b454ba5753a1d6518ed5, type: 3}
+      propertyPath: maxSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802853902444202310, guid: 4e33c1644d26b454ba5753a1d6518ed5, type: 3}
+      propertyPath: onGround
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802853902444202310, guid: 4e33c1644d26b454ba5753a1d6518ed5, type: 3}
+      propertyPath: jumpForce
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8335764207581627645, guid: 4e33c1644d26b454ba5753a1d6518ed5, type: 3}
       propertyPath: m_Name
       value: Robot
@@ -5446,6 +5466,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3040362248310751811, guid: 5e430d3350ed082419945beb2af243e5, type: 3}
+      propertyPath: airDrag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3040362248310751811, guid: 5e430d3350ed082419945beb2af243e5, type: 3}
+      propertyPath: jumpForce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3040362248310751811, guid: 5e430d3350ed082419945beb2af243e5, type: 3}
+      propertyPath: moveForce
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7600669648682916526, guid: 5e430d3350ed082419945beb2af243e5, type: 3}
       propertyPath: m_Name
       value: Fish
