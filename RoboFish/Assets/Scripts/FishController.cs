@@ -68,6 +68,10 @@ public class FishController : MonoBehaviour
 
             rb.linearDamping = waterDrag;
         }
+        if (other.CompareTag("Platform") && !other.CompareTag("Water"))
+        {
+            Debug.Log("I died?");
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -100,4 +104,8 @@ public class FishController : MonoBehaviour
         movementY = input.y;
     }
 
+    void OnAction()
+    {
+        Debug.Log("Hey you pressed E");
+    }
 }

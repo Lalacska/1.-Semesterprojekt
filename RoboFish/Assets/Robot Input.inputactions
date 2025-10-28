@@ -16,7 +16,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "New action1",
+                    "name": "Action",
                     "type": "Value",
                     "id": "1525d2ce-bd32-4da6-b354-4bbcf52330b6",
                     "expectedControlType": "",
@@ -84,11 +84,11 @@
                 {
                     "name": "",
                     "id": "8719656e-910e-4432-85b2-aea4986f4704",
-                    "path": "",
+                    "path": "<Keyboard>/rightShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action1",
+                    "action": "Action",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
