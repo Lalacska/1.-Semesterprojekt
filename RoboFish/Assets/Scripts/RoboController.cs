@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class RoboController : MonoBehaviour
 {
     Rigidbody2D rb;
-
+    string currentScene;
 
     float movementX = 0;
     float movementY = 0;
@@ -19,6 +20,7 @@ public class RoboController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        currentScene = SceneManager.GetActiveScene().name;
     }
 
     // Update is called once per frame
@@ -84,7 +86,7 @@ public class RoboController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Water"))
         {
-            Debug.Log("I'm Dead");
+            SceneManager.LoadScene(currentScene);   
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -113,5 +115,10 @@ public class RoboController : MonoBehaviour
         // Store the X and Y components of the movement.
         movementX = input.x;
         movementY = input.y;
+    }
+
+    void OnAction()
+    {
+        Debug.Log("Hey you pressed Shift");
     }
 }

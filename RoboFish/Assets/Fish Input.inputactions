@@ -16,13 +16,13 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "New action1",
-                    "type": "Value",
-                    "id": "1525d2ce-bd32-4da6-b354-4bbcf52330b6",
+                    "name": "Action",
+                    "type": "Button",
+                    "id": "46b4d38a-5205-4108-bbe2-1d8ecc3849c1",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -83,12 +83,12 @@
                 },
                 {
                     "name": "",
-                    "id": "8719656e-910e-4432-85b2-aea4986f4704",
-                    "path": "",
-                    "interactions": "",
+                    "id": "a1da91a6-199e-489e-8e6b-cf1f89c21097",
+                    "path": "<Keyboard>/e",
+                    "interactions": "Tap",
                     "processors": "",
                     "groups": "",
-                    "action": "New action1",
+                    "action": "Action",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
