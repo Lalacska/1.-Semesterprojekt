@@ -1,10 +1,12 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class RoboController : MonoBehaviour
 {
     Rigidbody2D rb;
-
+    string currentScene;
 
     float movementX = 0;
     float movementY = 0;
@@ -15,23 +17,36 @@ public class RoboController : MonoBehaviour
     public bool onGround;
     bool jump = false;
     LeverController currentLever;
+
+    //Lever controlls
+    public InputAction actionInput;
+    private IInteractable interactTarget;
+    private bool rightShiftPressed = false;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        currentScene = SceneManager.GetActiveScene().name;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Reset flag when the key is released
+        if (Keyboard.current.enterKey.wasReleasedThisFrame)
+        {
+            rightShiftPressed = false;
+        }
         if (Input.GetKeyDown(KeyCode.Space) && onGround == true)
         {
             jump = true;
         }
-        if (Input.GetKeyDown(KeyCode.F) && currentLever != null)
-        {
-            currentLever.FlipSwitch();
-        }
+        //if (Input.GetKeyDown(KeyCode.F) && currentLever != null)
+        //{
+        //    currentLever.FlipSwitch();
+        //}
     }
     private void FixedUpdate()
     {
@@ -59,6 +74,18 @@ public class RoboController : MonoBehaviour
         }
 
     }
+
+    private void OnAction()
+    {
+        // Prevent multiple triggers if the key is held
+        if (!rightShiftPressed)
+        {
+            rightShiftPressed = true;
+            Debug.Log("Robot");
+            interactTarget?.Interact();
+        }
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Platform"))
@@ -75,6 +102,7 @@ public class RoboController : MonoBehaviour
             onGround = false;
         }
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Lever"))
@@ -84,7 +112,12 @@ public class RoboController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Water"))
         {
-            Debug.Log("I'm Dead");
+            SceneManager.LoadScene(currentScene);
+        }
+
+        if (collision.gameObject.CompareTag("Lever"))
+        {
+            interactTarget = collision.GetComponent<IInteractable>();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -93,6 +126,12 @@ public class RoboController : MonoBehaviour
         {
             this.currentLever = null;
         }
+        //if (collision.CompareTag("Lever"))
+        //{
+        //    canUseLever = false;
+        //}
+        if (collision.GetComponent<IInteractable>() == interactTarget)
+            interactTarget = null;
     }
     /*
     private void OnTriggerStay2D(Collider2D collision)
@@ -114,4 +153,6 @@ public class RoboController : MonoBehaviour
         movementX = input.x;
         movementY = input.y;
     }
+
+
 }

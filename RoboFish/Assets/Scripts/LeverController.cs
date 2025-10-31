@@ -1,21 +1,21 @@
 using UnityEngine;
 
-public class LeverController : MonoBehaviour
+public class LeverController : MonoBehaviour, IInteractable
 {
-    public bool activated;
+    [SerializeField] GameObject gate;
+    public GateScript gateScript;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        gateScript = gate.GetComponent<GateScript>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Interact()
     {
-        
-    }
-    public void FlipSwitch()
-    {
-        this.activated = !this.activated;
+
+        Debug.Log("Lever");
+        gateScript.Interact();
     }
 }
