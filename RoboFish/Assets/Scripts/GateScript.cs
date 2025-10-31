@@ -15,15 +15,16 @@ public class GateScript : MonoBehaviour
     {
         Vector3 startposition = transform.position;
     }
-        
 
-    
+
+
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        switch(direction) {
-            case(0): 
+        switch (direction)
+        {
+            case (0):
                 if (open)
                 {
                     if (transform.position.y < startposition.y + distance)
@@ -39,7 +40,8 @@ public class GateScript : MonoBehaviour
                         transform.Translate(0f, -speed, 0f);
                         break;
                     }
-                }break;
+                }
+                break;
             case (1):
                 if (open)
                 {
@@ -76,7 +78,7 @@ public class GateScript : MonoBehaviour
                     }
                 }
                 break;
-                case (3):
+            case (3):
                 if (open)
                 {
                     if (transform.position.x > startposition.x - distance)
@@ -92,10 +94,24 @@ public class GateScript : MonoBehaviour
                         transform.Translate(speed, 0f, 0f);
                         break;
                     }
-                }break;
+                }
+                break;
         }
-        
+    }
+
+
+        public void FlipLever()
+    {
+        if (open)
+        {
+            open = false;
+        }
+        else
+        {
+            open = true;
+        }
 
     }
+    
     
 }
