@@ -2,7 +2,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class GateScript : MonoBehaviour
+public class GateScript : MonoBehaviour, IInteractable
 {
     public bool open = false;
     
@@ -10,15 +10,14 @@ public class GateScript : MonoBehaviour
     public float speed = 0.005f;
     private Vector3 startposition;
     public int direction = 0;
+    
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Vector3 startposition = transform.position;
     }
         
-
-    
-
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -97,5 +96,25 @@ public class GateScript : MonoBehaviour
         
 
     }
-    
+    public void FlipLever()
+    {
+
+        Debug.Log("Flip");
+        if (open)
+        {
+            open = false;
+        }
+        else
+        {
+            open = true;
+        }
+
+    }
+
+    public void Interact()
+    {
+
+        Debug.Log("Gate");
+        FlipLever();
+    }
 }

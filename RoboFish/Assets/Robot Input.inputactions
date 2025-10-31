@@ -84,8 +84,8 @@
                 {
                     "name": "",
                     "id": "8719656e-910e-4432-85b2-aea4986f4704",
-                    "path": "<Keyboard>/rightShift",
-                    "interactions": "",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "Action",
