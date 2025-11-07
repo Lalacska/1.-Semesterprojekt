@@ -8,6 +8,7 @@ TagManager:
   - Lever
   - Water
   - DryPlatform
+  - SpikeDeath
   layers:
   - Default
   - TransparentFX
