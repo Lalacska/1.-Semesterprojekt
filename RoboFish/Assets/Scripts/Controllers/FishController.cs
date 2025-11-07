@@ -27,7 +27,6 @@ public class FishController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log("FUpdate");
         if (inWater)
         {
             Vector2 input = new Vector2(movementX, movementY);

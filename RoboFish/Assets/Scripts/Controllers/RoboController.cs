@@ -43,10 +43,6 @@ public class RoboController : MonoBehaviour
         {
             jump = true;
         }
-        //if (Input.GetKeyDown(KeyCode.F) && currentLever != null)
-        //{
-        //    currentLever.FlipSwitch();
-        //}
     }
     private void FixedUpdate()
     {
@@ -61,11 +57,6 @@ public class RoboController : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(-maxSpeed, rb.linearVelocity.y);
         }
-
-        //if (direction == 0)
-        // {
-        //     rb.linearVelocity = new Vector2 (0,rb.linearVelocity.y);
-        // }
 
         if (jump)
         {
@@ -108,16 +99,14 @@ public class RoboController : MonoBehaviour
         if (collision.gameObject.CompareTag("Lever"))
         {
             this.currentLever = collision.gameObject.GetComponent<LeverController>();
+            interactTarget = collision.GetComponent<IInteractable>();
+            Debug.Log(currentLever);
+            Debug.Log(interactTarget);
         }
 
         if (collision.gameObject.CompareTag("Water"))
         {
             SceneManager.LoadScene(currentScene);
-        }
-
-        if (collision.gameObject.CompareTag("Lever"))
-        {
-            interactTarget = collision.GetComponent<IInteractable>();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -126,22 +115,9 @@ public class RoboController : MonoBehaviour
         {
             this.currentLever = null;
         }
-        //if (collision.CompareTag("Lever"))
-        //{
-        //    canUseLever = false;
-        //}
         if (collision.GetComponent<IInteractable>() == interactTarget)
             interactTarget = null;
     }
-    /*
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Lever") && Input.GetKeyDown(KeyCode.F))
-        {
-            collision.gameObject.GetComponent<LeverController>().FlipSwitch();
-        }
-    }
-    */
 
     void OnMove(InputValue movementValue)
     {

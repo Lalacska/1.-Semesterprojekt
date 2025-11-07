@@ -73,10 +73,10 @@ GameObject:
   - component: {fileID: 4810948107145431494}
   - component: {fileID: 1451428541599073698}
   - component: {fileID: 5989966473054007966}
-  - component: {fileID: 5972340839880562418}
+  - component: {fileID: 766875441725752532}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Platform
+  m_TagString: Lever
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,8 +137,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -852815005
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7ac9d5c23411a28468d5185142f09098, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -197,7 +197,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5972340839880562418
+--- !u!114 &766875441725752532
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8306610935293279020}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 500a34b8b8c53544b8000d1c7bfb0589, type: 3}
+  m_Script: {fileID: 11500000, guid: fe476eae142a7f94b89cd425bb44078b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pointA: {fileID: 4162601218512949772}

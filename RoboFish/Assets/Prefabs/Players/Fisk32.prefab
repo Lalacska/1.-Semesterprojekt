@@ -136,10 +136,11 @@ MonoBehaviour:
   inWater: 0
   moveForce: 10
   jumpForce: 2
-  moveForceWater: 200
-  waterDrag: 1
+  moveForceWater: 50
+  waterDrag: 10
   airDrag: 0.5
   maxSpeed: 5
+  sinkingForce: 5
 --- !u!61 &721381149968138927
 BoxCollider2D:
   m_ObjectHideFlags: 0

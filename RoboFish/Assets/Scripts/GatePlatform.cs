@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class GatePlatform : MonoBehaviour
+public class GatePlatform : MonoBehaviour, IInteractable
 {
 
     public Transform pointA;
@@ -36,5 +36,10 @@ public class GatePlatform : MonoBehaviour
     public void Activate()
     {
         nextPosition = (nextPosition == pointA.position) ? pointB.position : pointA.position;
+    }
+
+    public void Interact()
+    {
+        Activate();
     }
 }

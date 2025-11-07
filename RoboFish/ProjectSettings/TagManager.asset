@@ -61,6 +61,9 @@ TagManager:
   - name: Water
     uniqueID: 579133721
     locked: 0
+  - name: BorderFade
+    uniqueID: 1964208967
+    locked: 0
   m_RenderingLayers:
   - Default
   - Light Layer 1
