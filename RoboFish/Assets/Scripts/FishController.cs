@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class FishController : MonoBehaviour
 {
@@ -7,12 +8,15 @@ public class FishController : MonoBehaviour
 
     float movementX = 0;
     float movementY = 0;
-    private bool inWater = false; // <-- track if fish is in water
+    public bool inWater = false; // <-- track if fish is in water
 
     [SerializeField] private float moveForce = 10f;
     [SerializeField] private float jumpForce = 2f;
-    [SerializeField] private float waterDrag = 1f;
+    [SerializeField] private float moveForceWater = 200f;
+    [SerializeField] private float waterDrag = 4f;
     [SerializeField] private float airDrag = 0.5f;
+    [SerializeField] private float maxSpeed = 5f;
+    [SerializeField] private float sinkingForce = 5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,36 +27,35 @@ public class FishController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Debug.Log("FUpdate");
         if (inWater)
         {
-            // Create a 2D movement vector using the X and Y inputs.
-            Vector2 movement = new Vector2(movementX, movementY);
+            Vector2 input = new Vector2(movementX, movementY);
 
-            // Apply force to the Rigidbody to move the player.
-            rb.AddForce( movement * moveForce, ForceMode2D.Force);
+            // Calculate the desired velocity
+            Vector2 desiredVelocity = input * maxSpeed;
 
-            // Apply gentle sinking when not pressing up
+            // Calculate the difference between current velocity and desired velocity
+            Vector2 velocityChange = desiredVelocity - rb.linearVelocity;
+
+            // Apply only the needed force to move toward desired velocity
+            rb.AddForce(velocityChange * moveForceWater * Time.fixedDeltaTime, ForceMode2D.Force);
+
+            // Gentle sinking when not pressing up
             if (movementY <= 0.01f)
             {
-                rb.AddForce(Vector2.down * (moveForce * 0.1f), ForceMode2D.Force);
+                rb.AddForce(Vector2.down * sinkingForce, ForceMode2D.Force);
             }
-
-            // Optional: Clamp velocity to prevent runaway speed underwater
-            rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, 5f);
         }
         else
         {
-            Vector2 movement = new Vector2(movementX, 0f);
-            rb.AddForce(movement * moveForce);
+            Vector2 input = new Vector2(movementX, 0f);
 
-        }
-    }
+            // Desired horizontal velocity in air
+            Vector2 desiredVelocity = new Vector2(input.x * maxSpeed, rb.linearVelocity.y);
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Water")) 
-        {
-            Debug.Log("Water");
+            Vector2 velocityChange = desiredVelocity - rb.linearVelocity;
+            rb.AddForce(velocityChange * moveForce * Time.fixedDeltaTime, ForceMode2D.Force);
         }
     }
 
@@ -61,16 +64,19 @@ public class FishController : MonoBehaviour
         Debug.Log("a");
         if (other.CompareTag("Water"))
         {
-            GetComponent<Rigidbody2D>().gravityScale = 0f;
+            rb.gravityScale = 0f;
             inWater = true;
 
             rb.linearVelocity *= 0.5f;
-
             rb.linearDamping = waterDrag;
         }
         if (other.CompareTag("Platform") && !other.CompareTag("Water"))
         {
             Debug.Log("I died?");
+        }
+        if (other.CompareTag("SpikeDeath"))
+        {
+            SceneManager.LoadScene("Test");
         }
     }
 
@@ -79,9 +85,8 @@ public class FishController : MonoBehaviour
         Debug.Log("b");
         if (other.CompareTag("Water"))
         {
-            GetComponent<Rigidbody2D>().gravityScale = 1f;
+            rb.gravityScale = 1f;
             inWater = false;
-
             rb.linearDamping = airDrag;
 
             // If moving upward fast, apply jump boost
@@ -95,7 +100,7 @@ public class FishController : MonoBehaviour
     // This function is called when a move input is detected.
     void OnMove(InputValue movementValue)
     {
-        
+        Debug.Log("Move!");
         // Convert the input value into a Vector2 for movement.
         Vector2 input = movementValue.Get<Vector2>();
 
