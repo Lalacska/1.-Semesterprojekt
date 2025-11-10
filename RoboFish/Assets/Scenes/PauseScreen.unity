@@ -464,8 +464,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimerText: {fileID: 585389010}
-  gameOverPanel: {fileID: 895227958}
-  totalTime: 60
+  gameOverPanel: {fileID: 675704856}
+  totalTime: 5
 --- !u!114 &585389010 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6587280128374901225, guid: 52d6c70ff27cea44ab4c3c8b1874670a, type: 3}
@@ -625,7 +625,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimerCanvas
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3823098538824171243, guid: 52d6c70ff27cea44ab4c3c8b1874670a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -765,11 +766,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784019335}
   m_CullTransparentMesh: 1
---- !u!1 &895227958 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 417425526551000799, guid: 52d6c70ff27cea44ab4c3c8b1874670a, type: 3}
-  m_PrefabInstance: {fileID: 774560142}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1007494241
 GameObject:
   m_ObjectHideFlags: 0

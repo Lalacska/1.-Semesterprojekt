@@ -11,8 +11,7 @@ public class AnimSpikesScript : MonoBehaviour
     void Start()
     {
         timer = interval; // starter timeren
-        if (anim == null)
-            anim = GetComponent<Animator>();
+
     }
 
     void Update()
