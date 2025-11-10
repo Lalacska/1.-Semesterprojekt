@@ -19400,7 +19400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 1022362112}
-  interval: 10
+  interval: 3
 --- !u!61 &1022362115
 BoxCollider2D:
   m_ObjectHideFlags: 0
