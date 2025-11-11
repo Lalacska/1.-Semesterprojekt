@@ -1,0 +1,2164 @@
+fileFormatVersion: 2
+guid: 6f74c7b9a30c55e4a9a4d473bf77cfec
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UpdatedRFUI_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 606
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8080ec78cee2e8e4aa2a6b73d88adec4
+      internalID: 442585611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 606
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f07dfc93f1517d40a13ed9ebac1112f
+      internalID: 74097758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_2
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 606
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 519c0820b68c5e64bab9e94d97d7d039
+      internalID: -1720116036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_3
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 606
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5344f5d031aa7c149bb30074e8b3ddf1
+      internalID: -304568279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_4
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 606
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9618ace6d5f85244da0869c286afe119
+      internalID: 679497577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_5
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 606
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee870552ea32654698d2a5fa8b84967
+      internalID: -7624647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_6
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 606
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 657b440a1f18cdd45b8346b0e58869f9
+      internalID: -1346910336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_7
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 606
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05fc3eaa23d61c41bd4a45a1b52ed09
+      internalID: -683863387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_8
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 606
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c09cdd1b86356d46a492d3f2dd74366
+      internalID: -1943564921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_9
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 606
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 991d91ad80e332e4b897f02b4d54c861
+      internalID: 1348607406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_10
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 606
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c929776f6ee79f42bb2a8d6cef093d7
+      internalID: -521489601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_11
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 558
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c63cff83de6c33439a43e93483d4d35
+      internalID: -1398154330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_12
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 558
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0572ca71b19674986d9aa0c6f25695
+      internalID: -1213782688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_13
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 558
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dcbaba029cabd84880d30445b8908c1
+      internalID: -82491918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_14
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 558
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a7073389f1f1e7468504257690914fe
+      internalID: -2079477399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_15
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 558
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 025d02f3e49ffe84cb7b9f24f8d81d87
+      internalID: 1228664621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_16
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 558
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d3bed460d3413049a2976e0dc12abb8
+      internalID: -1251970940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_17
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 558
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3c57129bb9ca44ebd362b793931eae
+      internalID: -1426111039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_18
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 558
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3075439d4883f80489e68cd011eb6a2c
+      internalID: 223797954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_19
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 558
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139716e4ac459be4bb3af71d656c977b
+      internalID: -199413658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_20
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 558
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c44f6c78560d6f409baa02ab3d11830
+      internalID: -583991504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_21
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 558
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95cdc6b05a8c564d96cf25f82bb62f8
+      internalID: 970189722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_22
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 510
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc05e57fa2580194e871e7c11233eba8
+      internalID: 1814284945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_23
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 510
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43571bfa29023c340beb7cd07d374102
+      internalID: 425101409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_24
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 510
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6ba68be79f33747b008745297a07b4
+      internalID: 1127422363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_25
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 510
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2fce28d4eba834cb0ff2c276ebdbbf
+      internalID: -275992911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_26
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 510
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59ca303beb8b86488952045eb86f1c1
+      internalID: 1966181961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_27
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 510
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92246ea6f24aaf247aded458ab0c409f
+      internalID: 1532972779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_28
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 510
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d3b6d682ed8ee4cac1660055efcef9
+      internalID: 1253111014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_29
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 510
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf12c9814ef9074e9d4db4949b5107e
+      internalID: 360994874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_30
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 510
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92832fa2419d6cb45bc9aa690620bc26
+      internalID: -934128328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_31
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 510
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ddb022ec33aa434e8ec2c4277d77a36
+      internalID: -1027269968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_32
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 510
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0770a873e87a69478e2d7900ab42cab
+      internalID: 303734107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_33
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 462
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4fa888ff9cc0f740a32b23a3d6c4dda
+      internalID: -933637944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_34
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 462
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 698b62dc5af29ad4a880cb2a5ccdb367
+      internalID: 1485743412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_35
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 462
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48aadc638c7134c4e82896faadc978ae
+      internalID: -716309760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_36
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 462
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 564498570b9bc2c4da6dc9b3d47d87be
+      internalID: -601338243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_37
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 462
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7cc87b3769976d4db9e6da58b29d288
+      internalID: 1677987293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_38
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 460
+        width: 39
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da6a90950d152941bf51def9159f880
+      internalID: 1461199974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_39
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 463
+        width: 1
+        height: 1
+      alignment: 9
+      pivot: {x: -0.49197388, y: 0.99838257}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17d1de55a1e8e54cbd4ca518ccff9a8
+      internalID: 653832963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_40
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 467
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aafd40aeac566f044a82454eddf50978
+      internalID: 1125934625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_41
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 462
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06399de987445654a8e3cc8a0d83e5f6
+      internalID: -2084444838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_42
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 445
+        width: 64
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df58f62b82e26dc408fa58a503473bd0
+      internalID: -1473490391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_43
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 451
+        width: 56
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f24e014340fcb4bb59f16d4d8ee4ac
+      internalID: 331146385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_44
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 437
+        width: 56
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d643c010512ba04983b3d86153aa802
+      internalID: 1683928284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_45
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 414
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ea252cfe69e6e4cb95dbda0a764aff
+      internalID: 1855256755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_46
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 414
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de2cf71ca6cc9a41806a495363a05da
+      internalID: -463040613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_47
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 414
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84816aba4bba82c429a471991c9e2d41
+      internalID: 33086247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_48
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 414
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142a0d8f4de75fb4792ad3f7fe37f885
+      internalID: 780869829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_49
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 416
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb34874c833c20488db071ac136ac5f
+      internalID: -986402718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_50
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 416
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dffce3652ed1e2744bc47db5c5f75872
+      internalID: -1742982125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_51
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 416
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f2ffd9d0861fe4297d0fdfd93c3f25
+      internalID: -235564741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_52
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 425
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ada02f03c12454484391ad0268dca0
+      internalID: -291213022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_53
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 416
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb901f4ba2a53641a94415438f72621
+      internalID: 777327967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_54
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 421
+        width: 56
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00badcb171bc0f540abdc856457866be
+      internalID: -1345058213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_55
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 414
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109f76cbbe0e6f24d9b51421f8d9c2c4
+      internalID: -1639203560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_56
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 416
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d71fcde5d9fff47bea17e67351cb76
+      internalID: 700897962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_57
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 398
+        width: 64
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4d6a1c27350fd42a2cbf661a758122
+      internalID: 354123366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_58
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 402
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9af61e2da003704e97d7fc335782ee0
+      internalID: 32689124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_59
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 366
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da369b4d631ade429fc8843b6df7dc3
+      internalID: -171883155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_60
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 366
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8929c6de1e4978544a977df9516aa786
+      internalID: -1039636040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_61
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 366
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dae6eb889735b64cb8bb8e036a85eea
+      internalID: 653005289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_62
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 366
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0749a33a2df6846a6353440cf38d21
+      internalID: -1561398399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_63
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 366
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9686e4c60ee0a0e45914600c17644d03
+      internalID: 1576779557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_64
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 318
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990e6d38a94174b41aeb8cf5c10c481b
+      internalID: -1617112874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_65
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 318
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85bfe0171b743dc478aa68b59b68654e
+      internalID: -1451966413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_66
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 318
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adcc212a0aa4c4b498ab9da1b8707c76
+      internalID: -1346129236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_67
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 318
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca9ef741fa142e442bb0057711212d56
+      internalID: -2016367728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_68
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 318
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5372036508017dc4494a5b213cb87fe6
+      internalID: -444397674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_69
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 318
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aad59b3b1ff8c064594b1a317e63490d
+      internalID: 1315653981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_70
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 270
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68fb2b5107a4cf5458479898a4f82f3c
+      internalID: 304097037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_71
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 270
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b30851699756844e868888b88dac477
+      internalID: 1778969751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_72
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 270
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec74781af45ddc34989550d1c9915443
+      internalID: 1018617440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_73
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 270
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daafd3442d43c534091ebbd6c3131891
+      internalID: 1742178623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_74
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 270
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21df850b552d63f438860c3a329dd941
+      internalID: -82366509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_75
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 270
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1babadecae26d27479528379c082da37
+      internalID: -504359808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_76
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 222
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cdf03b55a2a66349bc645fde641f850
+      internalID: 550904150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_77
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 222
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab2d28f3993fac4da90cd45b0befa64
+      internalID: 984449473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_78
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 222
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6aed709c3a3a948ad2534770fbe0b0
+      internalID: -1093290174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_79
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 222
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1511f932b8ba10b4dabe61c284cbbf2f
+      internalID: -787839521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_80
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 222
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b6629029ada764ba5e10387f994664
+      internalID: -608132632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_81
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 222
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d205f2d14210e804aa6a532b068ac290
+      internalID: -367169753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_82
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1
+        width: 82
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47afc0f5c3c32b84cba4937783a64850
+      internalID: 1124549708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_83
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1
+        width: 82
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb9f84243448af47afab67855ac8dbd
+      internalID: -1908017882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_84
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1
+        width: 82
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f864429e457904c940d78ec16788d5
+      internalID: 1384174774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_85
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 1
+        width: 82
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cce53a02aa99d5418fd1f4001438bce
+      internalID: 348911236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_86
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 1
+        width: 82
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 876d71a22082e384e817657704722655
+      internalID: 1905659244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_87
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 1
+        width: 80
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f36d287d1549fd40af2d09c969350ad
+      internalID: 1009266470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UpdatedRFUI_88
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 85
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7a178e4d629c8843ab0dc205f3b8f97
+      internalID: 1329816064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ad1432eeae5d46c408cf242887475eb0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      UpdatedRFUI_0: 442585611
+      UpdatedRFUI_1: 74097758
+      UpdatedRFUI_10: -521489601
+      UpdatedRFUI_11: -1398154330
+      UpdatedRFUI_12: -1213782688
+      UpdatedRFUI_13: -82491918
+      UpdatedRFUI_14: -2079477399
+      UpdatedRFUI_15: 1228664621
+      UpdatedRFUI_16: -1251970940
+      UpdatedRFUI_17: -1426111039
+      UpdatedRFUI_18: 223797954
+      UpdatedRFUI_19: -199413658
+      UpdatedRFUI_2: -1720116036
+      UpdatedRFUI_20: -583991504
+      UpdatedRFUI_21: 970189722
+      UpdatedRFUI_22: 1814284945
+      UpdatedRFUI_23: 425101409
+      UpdatedRFUI_24: 1127422363
+      UpdatedRFUI_25: -275992911
+      UpdatedRFUI_26: 1966181961
+      UpdatedRFUI_27: 1532972779
+      UpdatedRFUI_28: 1253111014
+      UpdatedRFUI_29: 360994874
+      UpdatedRFUI_3: -304568279
+      UpdatedRFUI_30: -934128328
+      UpdatedRFUI_31: -1027269968
+      UpdatedRFUI_32: 303734107
+      UpdatedRFUI_33: -933637944
+      UpdatedRFUI_34: 1485743412
+      UpdatedRFUI_35: -716309760
+      UpdatedRFUI_36: -601338243
+      UpdatedRFUI_37: 1677987293
+      UpdatedRFUI_38: 1461199974
+      UpdatedRFUI_39: 653832963
+      UpdatedRFUI_4: 679497577
+      UpdatedRFUI_40: 1125934625
+      UpdatedRFUI_41: -2084444838
+      UpdatedRFUI_42: -1473490391
+      UpdatedRFUI_43: 331146385
+      UpdatedRFUI_44: 1683928284
+      UpdatedRFUI_45: 1855256755
+      UpdatedRFUI_46: -463040613
+      UpdatedRFUI_47: 33086247
+      UpdatedRFUI_48: 780869829
+      UpdatedRFUI_49: -986402718
+      UpdatedRFUI_5: -7624647
+      UpdatedRFUI_50: -1742982125
+      UpdatedRFUI_51: -235564741
+      UpdatedRFUI_52: -291213022
+      UpdatedRFUI_53: 777327967
+      UpdatedRFUI_54: -1345058213
+      UpdatedRFUI_55: -1639203560
+      UpdatedRFUI_56: 700897962
+      UpdatedRFUI_57: 354123366
+      UpdatedRFUI_58: 32689124
+      UpdatedRFUI_59: -171883155
+      UpdatedRFUI_6: -1346910336
+      UpdatedRFUI_60: -1039636040
+      UpdatedRFUI_61: 653005289
+      UpdatedRFUI_62: -1561398399
+      UpdatedRFUI_63: 1576779557
+      UpdatedRFUI_64: -1617112874
+      UpdatedRFUI_65: -1451966413
+      UpdatedRFUI_66: -1346129236
+      UpdatedRFUI_67: -2016367728
+      UpdatedRFUI_68: -444397674
+      UpdatedRFUI_69: 1315653981
+      UpdatedRFUI_7: -683863387
+      UpdatedRFUI_70: 304097037
+      UpdatedRFUI_71: 1778969751
+      UpdatedRFUI_72: 1018617440
+      UpdatedRFUI_73: 1742178623
+      UpdatedRFUI_74: -82366509
+      UpdatedRFUI_75: -504359808
+      UpdatedRFUI_76: 550904150
+      UpdatedRFUI_77: 984449473
+      UpdatedRFUI_78: -1093290174
+      UpdatedRFUI_79: -787839521
+      UpdatedRFUI_8: -1943564921
+      UpdatedRFUI_80: -608132632
+      UpdatedRFUI_81: -367169753
+      UpdatedRFUI_82: 1124549708
+      UpdatedRFUI_83: -1908017882
+      UpdatedRFUI_84: 1384174774
+      UpdatedRFUI_85: 348911236
+      UpdatedRFUI_86: 1905659244
+      UpdatedRFUI_87: 1009266470
+      UpdatedRFUI_88: 1329816064
+      UpdatedRFUI_9: 1348607406
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
