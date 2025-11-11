@@ -130,7 +130,7 @@ public class NewRoboController : MonoBehaviour
     {
         if (dieTogether)
         {
-            SceneManager.LoadScene("Test2");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         else
         {

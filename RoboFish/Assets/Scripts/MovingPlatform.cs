@@ -5,11 +5,14 @@ public class MovingPlatform : MonoBehaviour
     public Transform pointA;
     public Transform pointB;
     public float movespeed = 2;
+    public float interval;
+    private float timer;
 
     private Vector3 nextPosition;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        timer = interval;
         nextPosition = pointB.position;
 
     }
@@ -20,7 +23,12 @@ public class MovingPlatform : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, nextPosition, movespeed * Time.deltaTime);
         if (transform.position == nextPosition)
         {
-            nextPosition = (nextPosition == pointA.position) ? pointB.position : pointA.position;
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                nextPosition = (nextPosition == pointA.position) ? pointB.position : pointA.position;
+                timer = interval;
+            }
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
