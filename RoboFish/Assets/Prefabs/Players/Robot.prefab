@@ -157,10 +157,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5898712897018563041}
   - component: {fileID: 958141114080697212}
-  - component: {fileID: 7802853902444202310}
   - component: {fileID: 2831297195770122012}
-  - component: {fileID: 7666206913223923014}
   - component: {fileID: 715074113309602755}
+  - component: {fileID: 8848256195317993875}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Player
@@ -240,32 +239,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7802853902444202310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8335764207581627645}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6722782d1313d8a49b21fe3f9e0bda60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dieTogether: 0
-  maxSpeed: 5
-  speed: 5
-  jumpForce: 4
-  onGround: 0
-  actionInput:
-    m_Name: Action Input
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 58d4effa-33ca-49d5-ae45-160426d0f019
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
 --- !u!50 &2831297195770122012
 Rigidbody2D:
   serializedVersion: 5
@@ -293,7 +266,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &7666206913223923014
+--- !u!114 &715074113309602755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8335764207581627645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5da033adb393574983b3930b0a103a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveStats: {fileID: 11400000, guid: 5c89c34c5b9d8874785a05f570a0734a, type: 2}
+  _feetColl: {fileID: 9167842198629376844}
+  _bodyColl: {fileID: 203769933634110151}
+  dieTogether: 0
+--- !u!114 &8848256195317993875
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -323,18 +312,3 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &715074113309602755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8335764207581627645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5da033adb393574983b3930b0a103a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveStats: {fileID: 11400000, guid: 5c89c34c5b9d8874785a05f570a0734a, type: 2}
-  _feetColl: {fileID: 9167842198629376844}
-  _bodyColl: {fileID: 203769933634110151}

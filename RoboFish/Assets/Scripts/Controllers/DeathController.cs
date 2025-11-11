@@ -3,7 +3,7 @@ using UnityEngine;
 public class DeathController : MonoBehaviour
 {
     [SerializeField]
-    RoboController roboController;
+    NewRoboController roboController;
 
     [SerializeField]
     FishController fishController;

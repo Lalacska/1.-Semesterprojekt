@@ -115,6 +115,12 @@ public class FishController : MonoBehaviour
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             }
         }
+        if (other.gameObject.CompareTag("Lever"))
+        {
+            this.currentLever = null;
+        }
+        if (other.GetComponent<IInteractable>() == interactTarget)
+            interactTarget = null;
     }
 
     public void SetDieTogehter(bool isTrue)
@@ -126,7 +132,7 @@ public class FishController : MonoBehaviour
     {
         if (dieTogether)
         {
-            SceneManager.LoadScene("Test");
+            SceneManager.LoadScene("Test2");
         }
         else
         {
