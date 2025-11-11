@@ -284,7 +284,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb75e06969b58340a7474c8a091bca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activated: 0
+  gate: {fileID: 0}
+  gateScript: {fileID: 0}
 --- !u!58 &1326586651
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -649,6 +650,22 @@ PrefabInstance:
     - target: {fileID: 5898712897018563041, guid: 4e33c1644d26b454ba5753a1d6518ed5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802853902444202310, guid: 4e33c1644d26b454ba5753a1d6518ed5, type: 3}
+      propertyPath: speed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802853902444202310, guid: 4e33c1644d26b454ba5753a1d6518ed5, type: 3}
+      propertyPath: maxSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802853902444202310, guid: 4e33c1644d26b454ba5753a1d6518ed5, type: 3}
+      propertyPath: jumpForce
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7802853902444202310, guid: 4e33c1644d26b454ba5753a1d6518ed5, type: 3}
+      propertyPath: actionInput.m_Name
+      value: Action Input
       objectReference: {fileID: 0}
     - target: {fileID: 8335764207581627645, guid: 4e33c1644d26b454ba5753a1d6518ed5, type: 3}
       propertyPath: m_Name
