@@ -8,9 +8,11 @@ public class RoboController : MonoBehaviour
     Rigidbody2D rb;
     string currentScene;
 
+    Vector3 originalPos;
     float movementX = 0;
     float movementY = 0;
 
+    public bool dieTogether = false;
     public float maxSpeed = 10;
     public float speed = 10;
     public float jumpForce = 7;
@@ -19,9 +21,8 @@ public class RoboController : MonoBehaviour
     LeverController currentLever;
 
     //Lever controlls
-    public InputAction actionInput;
     private IInteractable interactTarget;
-    private bool rightShiftPressed = false;
+    private bool actionButtonPressed = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -29,6 +30,7 @@ public class RoboController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         currentScene = SceneManager.GetActiveScene().name;
+        originalPos = rb.transform.position;
     }
 
     // Update is called once per frame
@@ -37,9 +39,9 @@ public class RoboController : MonoBehaviour
         // Reset flag when the key is released
         if (Keyboard.current.enterKey.wasReleasedThisFrame)
         {
-            rightShiftPressed = false;
+            actionButtonPressed = false;
         }
-        if (Input.GetKeyDown(KeyCode.Space) && onGround == true)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && onGround == true)
         {
             jump = true;
         }
@@ -69,9 +71,9 @@ public class RoboController : MonoBehaviour
     private void OnAction()
     {
         // Prevent multiple triggers if the key is held
-        if (!rightShiftPressed)
+        if (!actionButtonPressed)
         {
-            rightShiftPressed = true;
+            actionButtonPressed = true;
             Debug.Log("Robot");
             interactTarget?.Interact();
         }
@@ -106,7 +108,7 @@ public class RoboController : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Water"))
         {
-            SceneManager.LoadScene(currentScene);
+            Dead();
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -130,5 +132,19 @@ public class RoboController : MonoBehaviour
         movementY = input.y;
     }
 
-
+    public void SetDieTogehter(bool isTrue)
+    {
+        dieTogether = isTrue;
+    }
+    void Dead()
+    {
+        if (dieTogether)
+        {
+            SceneManager.LoadScene("Test");
+        }
+        else
+        {
+            transform.position = originalPos;
+        }
+    }
 }

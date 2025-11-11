@@ -140,9 +140,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6722782d1313d8a49b21fe3f9e0bda60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 10
-  speed: 10
-  jumpForce: 7
+  dieTogether: 0
+  maxSpeed: 5
+  speed: 5
+  jumpForce: 4
   onGround: 0
   actionInput:
     m_Name: Action Input
