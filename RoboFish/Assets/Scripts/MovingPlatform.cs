@@ -21,16 +21,14 @@ public class MovingPlatform : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, nextPosition, movespeed * Time.deltaTime);
-
         if (transform.position == nextPosition)
         {
             timer -= Time.deltaTime;
-            if (timer <= 0f)
+            if (timer <= 0)
             {
                 nextPosition = (nextPosition == pointA.position) ? pointB.position : pointA.position;
                 timer = interval;
             }
-            
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
