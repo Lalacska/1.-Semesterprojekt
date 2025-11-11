@@ -6,9 +6,11 @@ public class FishController : MonoBehaviour
 {
     Rigidbody2D rb;
 
+    Vector3 originalPos;
     float movementX = 0;
     float movementY = 0;
     public bool inWater = false; // <-- track if fish is in water
+    bool dieTogether = false;
 
     [SerializeField] private float moveForce = 10f;
     [SerializeField] private float jumpForce = 2f;
@@ -18,12 +20,26 @@ public class FishController : MonoBehaviour
     [SerializeField] private float maxSpeed = 5f;
     [SerializeField] private float sinkingForce = 5f;
 
+    //Lever controlls
+    LeverController currentLever;
+    private IInteractable interactTarget;
+    private bool actionButtonPressed = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        originalPos = transform.position;
     }
 
+    private void Update()
+    {
+        // Reset flag when the key is released
+        if (Keyboard.current.eKey.wasReleasedThisFrame)
+        {
+            actionButtonPressed = false;
+        }
+    }
 
     private void FixedUpdate()
     {
@@ -75,7 +91,12 @@ public class FishController : MonoBehaviour
         }
         if (other.CompareTag("SpikeDeath"))
         {
-            SceneManager.LoadScene("Test");
+            Dead();
+        }
+        if (other.gameObject.CompareTag("Lever"))
+        {
+            this.currentLever = other.gameObject.GetComponent<LeverController>();
+            interactTarget = other.GetComponent<IInteractable>();
         }
     }
 
@@ -94,6 +115,29 @@ public class FishController : MonoBehaviour
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             }
         }
+        if (other.gameObject.CompareTag("Lever"))
+        {
+            this.currentLever = null;
+        }
+        if (other.GetComponent<IInteractable>() == interactTarget)
+            interactTarget = null;
+    }
+
+    public void SetDieTogehter(bool isTrue)
+    {
+        dieTogether = isTrue;
+    }
+
+    void Dead()
+    {
+        if (dieTogether)
+        {
+            SceneManager.LoadScene("Test2");
+        }
+        else
+        {
+            transform.position = originalPos;
+        }
     }
 
     // This function is called when a move input is detected.
@@ -110,6 +154,11 @@ public class FishController : MonoBehaviour
 
     void OnAction()
     {
-        Debug.Log("Hey you pressed E");
+        if (!actionButtonPressed)
+        {
+            actionButtonPressed = true;
+            Debug.Log("Hey you pressed E");
+            interactTarget?.Interact();
+        }
     }
 }
