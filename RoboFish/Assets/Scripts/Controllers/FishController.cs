@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class FishController : MonoBehaviour
 {
+    public static FishController Instance { get; set; }
     Rigidbody2D rb;
 
     Vector3 originalPos;
@@ -24,6 +25,16 @@ public class FishController : MonoBehaviour
     LeverController currentLever;
     private IInteractable interactTarget;
     private bool actionButtonPressed = false;
+
+    //Win Condition
+    public bool isWinning = false;
+
+    private void Awake()
+    {
+        isWinning = false;
+        Instance = this;
+    }
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -139,7 +150,20 @@ public class FishController : MonoBehaviour
             transform.position = originalPos;
         }
     }
-
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            isWinning = true;
+        }
+    }
+    public void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            isWinning = false;
+        }
+    }
     // This function is called when a move input is detected.
     void OnMove(InputValue movementValue)
     {
