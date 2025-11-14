@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class NewRoboController : MonoBehaviour
 {
+    public static NewRoboController Instance { get; set; }
     [Header("References")]
     public RoboMovementStats moveStats;
     [SerializeField] private Collider2D _feetColl;
@@ -51,10 +52,14 @@ public class NewRoboController : MonoBehaviour
     private IInteractable interactTarget;
     private bool actionButtonPressed = false;
 
+    //Win condition
+    public bool isWinning = false;
+
     private void Awake()
     {
+        isWinning = false;
         _isFacingRight = true;
-
+        Instance = this;
         _rb = GetComponent<Rigidbody2D>();
         originalPos = _rb.transform.position;
     }
@@ -130,7 +135,7 @@ public class NewRoboController : MonoBehaviour
     {
         if (dieTogether)
         {
-            SceneManager.LoadScene("Test2");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         else
         {
@@ -389,6 +394,20 @@ public class NewRoboController : MonoBehaviour
         else
         {
             _bumpedHead = false;
+        }
+    }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            isWinning = true;
+        }
+    }
+    public void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            isWinning = false;
         }
     }
     private void CollisionChecks()
