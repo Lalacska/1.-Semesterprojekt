@@ -64,6 +64,9 @@ TagManager:
   - name: BorderFade
     uniqueID: 1964208967
     locked: 0
+  - name: Particles
+    uniqueID: 1481881129
+    locked: 0
   m_RenderingLayers:
   - Default
   - Light Layer 1

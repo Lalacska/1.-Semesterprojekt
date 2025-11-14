@@ -35,6 +35,9 @@ public class FishController : MonoBehaviour
         Instance = this;
     }
 
+    //Particle controller
+    [SerializeField]
+    ParticleSystem part;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -83,6 +86,23 @@ public class FishController : MonoBehaviour
             Vector2 velocityChange = desiredVelocity - rb.linearVelocity;
             rb.AddForce(velocityChange * moveForce * Time.fixedDeltaTime, ForceMode2D.Force);
         }
+
+        // Particle handling in FixedUpdate (after movement code)
+        if (part != null && inWater)
+        {
+            var emission = part.emission;
+
+            // Only emit if the fish is actually moving in water
+            if (rb.velocity.magnitude > 0.1f)
+            {
+                emission.enabled = true;
+            }
+            else
+            {
+                emission.enabled = false;
+            }
+        }
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
