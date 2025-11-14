@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 383194803}
   - component: {fileID: 383194802}
   m_Layer: 5
-  m_Name: Image
+  m_Name: PauseImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -493,7 +493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &675704857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2614,11 +2614,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 126456119792528087, guid: 8db40fb202d28f847a4a6813c4a04c58, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 346914339760767070, guid: 8db40fb202d28f847a4a6813c4a04c58, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5089333166573145843, guid: 8db40fb202d28f847a4a6813c4a04c58, type: 3}
+      propertyPath: m_Name
+      value: PauseImage
       objectReference: {fileID: 0}
     - target: {fileID: 6285757990049574379, guid: 8db40fb202d28f847a4a6813c4a04c58, type: 3}
       propertyPath: m_Pivot.x
