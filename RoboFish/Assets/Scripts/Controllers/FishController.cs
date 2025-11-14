@@ -25,6 +25,8 @@ public class FishController : MonoBehaviour
     private IInteractable interactTarget;
     private bool actionButtonPressed = false;
 
+    string currentScene;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
