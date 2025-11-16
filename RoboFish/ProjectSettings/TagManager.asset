@@ -49,6 +49,9 @@ TagManager:
   - name: Background
     uniqueID: 3382234581
     locked: 0
+  - name: Particles
+    uniqueID: 1481881129
+    locked: 0
   - name: LevelLayer
     uniqueID: 3442152291
     locked: 0
@@ -63,9 +66,6 @@ TagManager:
     locked: 0
   - name: BorderFade
     uniqueID: 1964208967
-    locked: 0
-  - name: Particles
-    uniqueID: 1481881129
     locked: 0
   m_RenderingLayers:
   - Default
