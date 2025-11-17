@@ -1263,6 +1263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 672440270}
   - component: {fileID: 672440271}
+  - component: {fileID: 672440272}
   m_Layer: 5
   m_Name: MusicSlider
   m_TagString: Untagged
@@ -1343,6 +1344,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &672440272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672440269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1a99721429cb844fb6cf8e99d052c28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 672440271}
+  audioSource: {fileID: 682640221}
 --- !u!1 &682640216
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,7 +1475,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: e82b94a1a7320de4f96d22be5407f6f0, type: 3}
+  m_Resource: {fileID: 8300000, guid: a6c2275cdeab955468fe0672307c6abd, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
