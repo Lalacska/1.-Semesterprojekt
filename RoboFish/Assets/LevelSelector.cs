@@ -5,14 +5,12 @@ public class LevelSelector : MonoBehaviour
 {
     public void LevelOne()
     {
-        int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
-        SceneManager.LoadScene(nextScene);
+        SceneManager.LoadScene(1);
     }
 
     public void LevelTwo()
     {
-        int nextScene = SceneManager.GetActiveScene().buildIndex + 2;
-        SceneManager.LoadScene(nextScene);
+        SceneManager.LoadScene(2);
     }
 
 
