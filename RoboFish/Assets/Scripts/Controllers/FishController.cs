@@ -87,21 +87,21 @@ public class FishController : MonoBehaviour
             rb.AddForce(velocityChange * moveForce * Time.fixedDeltaTime, ForceMode2D.Force);
         }
 
-        // Particle handling in FixedUpdate (after movement code)
-        if (part != null && inWater)
-        {
-            var emission = part.emission;
+        //// Particle handling in FixedUpdate (after movement code)
+        //if (part != null && inWater)
+        //{
+        //    var emission = part.emission;
 
-            // Only emit if the fish is actually moving in water
-            if (rb.linearVelocity.magnitude > 0.1f)
-            {
-                emission.enabled = true;
-            }
-            else
-            {
-                emission.enabled = false;
-            }
-        }
+        //    // Only emit if the fish is actually moving in water
+        //    if (rb.linearVelocity.magnitude > 0.1f)
+        //    {
+        //        emission.enabled = true;
+        //    }
+        //    else
+        //    {
+        //        emission.enabled = false;
+        //    }
+        //}
 
     }
 
