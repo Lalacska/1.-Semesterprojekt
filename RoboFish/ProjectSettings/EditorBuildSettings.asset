@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/UI/Main Menu.unity
     guid: 3dfb7fe14d8e64d4aae4ed66bcfa833d
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 1fd91d2f38273644b9ad6814f28684f4
+  - enabled: 1
+    path: Assets/Scenes/Levels/LauraTest.unity
+    guid: 8efa19dbb6bfce442b9352dcd6831724
+  - enabled: 1
+    path: Assets/Scenes/Levels/LauraTest2.unity
+    guid: 14aaa87567a3b1f4d9063f91e275053e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
