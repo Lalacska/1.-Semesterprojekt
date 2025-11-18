@@ -93,7 +93,7 @@ public class FishController : MonoBehaviour
             var emission = part.emission;
 
             // Only emit if the fish is actually moving in water
-            if (rb.velocity.magnitude > 0.1f)
+            if (rb.linearVelocity.magnitude > 0.1f)
             {
                 emission.enabled = true;
             }
