@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfc586620a9021c41b531c097dabe56e, type: 3}
   m_Name: Robo Movement Stats
   m_EditorClassIdentifier: 
-  maxWalkSpeed: 3
+  maxWalkSpeed: 2
   groundAcceleration: 5
   groundDeceleration: 20
   airAcceleration: 5
