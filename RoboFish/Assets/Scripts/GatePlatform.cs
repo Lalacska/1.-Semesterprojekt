@@ -6,6 +6,7 @@ public class GatePlatform : MonoBehaviour, IInteractable
     public Transform pointA;
     public Transform pointB;
     public float movespeed = 2;
+    public bool sticky = false;
 
     private Vector3 nextPosition;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -21,7 +22,7 @@ public class GatePlatform : MonoBehaviour, IInteractable
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player")&& sticky)
         {
             collision.gameObject.transform.parent = transform;
         }

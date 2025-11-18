@@ -12,6 +12,7 @@ public class FishController : MonoBehaviour
     float movementY = 0;
     public bool inWater = false; // <-- track if fish is in water
     bool dieTogether = false;
+    bool _isFacingRight;
 
     [SerializeField] private float moveForce = 10f;
     [SerializeField] private float jumpForce = 2f;
@@ -175,6 +176,8 @@ public class FishController : MonoBehaviour
         // Store the X and Y components of the movement.
         movementX = input.x;
         movementY = input.y;
+        Debug.Log(movementX);
+        TurnCheck(movementX);
     }
 
     void OnAction()
@@ -184,6 +187,29 @@ public class FishController : MonoBehaviour
             actionButtonPressed = true;
             Debug.Log("Hey you pressed E");
             interactTarget?.Interact();
+        }
+    }
+    void TurnCheck(float direction)
+    {
+        if(_isFacingRight && direction > 0)
+        {
+            Turn(false);
+        }else if(!_isFacingRight && direction < 0)
+        {
+            Turn(true);
+        }
+    }
+    void Turn(bool turnRight)
+    {
+        if (turnRight)
+        {
+            _isFacingRight = true;
+            transform.Rotate(0f, -180f, 0f);
+        }
+        else
+        {
+            _isFacingRight = false;
+            transform.Rotate(0f, 180f, 0f);
         }
     }
 }
