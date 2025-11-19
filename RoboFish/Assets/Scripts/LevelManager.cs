@@ -2,13 +2,8 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    GameObject go;
 
     // Update is called once per frame
     void Update()
@@ -22,6 +17,7 @@ public class LevelManager : MonoBehaviour
 
     void Win()
     {
-        Debug.Log("Congrats you won");
+        Debug.Log("You have won!");
+        go.SetActive(true);
     }
 }
