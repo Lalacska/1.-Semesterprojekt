@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.54, y: -0.9, z: 0.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -779086935
-  m_SortingLayer: 4
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -1610703455, guid: 024545fe654aaa14f9eebe08e1aad469, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -143,6 +143,7 @@ MonoBehaviour:
   maxSpeed: 5
   sinkingForce: 5
   isWinning: 0
+  part: {fileID: 0}
 --- !u!50 &4913193856208911936
 Rigidbody2D:
   serializedVersion: 5
@@ -255,9 +256,9 @@ PolygonCollider2D:
       - {x: -0.14, y: -0.12}
       - {x: -0.099999994, y: -0.12}
       - {x: -0.099999994, y: -0.099999994}
-      - {x: -0.08, y: -0.099999994}
-      - {x: -0.08, y: -0.08}
-      - {x: -0.049999997, y: -0.08}
+      - {x: -0.07513769, y: -0.11458722}
+      - {x: -0.058119133, y: -0.11889936}
+      - {x: -0.024593875, y: -0.12827165}
       - {x: -0.04, y: -0.099999994}
       - {x: 0, y: -0.099999994}
       - {x: 0, y: -0.14}
