@@ -51,11 +51,14 @@ TagManager:
   - name: Particles
     uniqueID: 1481881129
     locked: 0
+  - name: Spikes
+    uniqueID: 3102224921
+    locked: 0
   - name: LevelLayer
     uniqueID: 3442152291
     locked: 0
-  - name: Spikes
-    uniqueID: 3102224921
+  - name: LevelLayer
+    uniqueID: 3442152291
     locked: 0
   - name: Player
     uniqueID: 3515880361

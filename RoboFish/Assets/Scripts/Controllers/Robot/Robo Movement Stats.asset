@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfc586620a9021c41b531c097dabe56e, type: 3}
   m_Name: Robo Movement Stats
   m_EditorClassIdentifier: 
-  maxWalkSpeed: 3
+  maxWalkSpeed: 2
   groundAcceleration: 5
   groundDeceleration: 20
   airAcceleration: 5
@@ -23,7 +23,7 @@ MonoBehaviour:
   groundDetectionRayLength: 0.02
   headDetectionRayLength: 0.02
   headWidth: 0.75
-  jumpHeight: 0.5
+  jumpHeight: 0.55
   jumpHeighCompensationFactor: 1.054
   timeTillJumpApex: 0.4
   gravityOnReleaseMultiplier: 2
@@ -35,7 +35,7 @@ MonoBehaviour:
   jumpBufferTime: 0.125
   jumpCoyoteTime: 0.1
   debugShowIsGroundedBox: 0
-  debugShowHeadBumpBox: 0
+  debugShowHeadBumpBox: 1
   showWalkJumpArc: 0
   stopOnCollision: 1
   drawRight: 1
