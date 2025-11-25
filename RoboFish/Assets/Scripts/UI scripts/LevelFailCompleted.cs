@@ -3,12 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelFailCompleted : MonoBehaviour
 {
-    private void Start()
-    {
-        Time.timeScale = 0;
-    }
-   
-
+    
     public void Next()
     {
         int nextScene = SceneManager.GetActiveScene().buildIndex + 1;

@@ -1034,26 +1034,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5106721476796061565, guid: df525e903fa72f141b0c037c34762e9e, type: 3}
-      propertyPath: maxSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5106721476796061565, guid: df525e903fa72f141b0c037c34762e9e, type: 3}
-      propertyPath: sinkingForce
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5106721476796061565, guid: df525e903fa72f141b0c037c34762e9e, type: 3}
-      propertyPath: moveForceWater
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 5505724054500451611, guid: df525e903fa72f141b0c037c34762e9e, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5505724054500451611, guid: df525e903fa72f141b0c037c34762e9e, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 72b3a13f58cae8e4f967dc6099c1314a, type: 2}
     - target: {fileID: 8699800274135919529, guid: df525e903fa72f141b0c037c34762e9e, type: 3}
       propertyPath: m_Name
       value: Fisk32

@@ -138,13 +138,13 @@ MonoBehaviour:
   inWater: 0
   moveForce: 10
   jumpForce: 2
-  moveForceWater: 50
+  moveForceWater: 40
   waterDrag: 10
   airDrag: 0.5
-  maxSpeed: 5
-  sinkingForce: 5
+  maxSpeed: 10
+  sinkingForce: 10
   isWinning: 0
-  part: {fileID: 5681715526148049723}
+  part: {fileID: 0}
 --- !u!50 &4913193856208911936
 Rigidbody2D:
   serializedVersion: 5
@@ -182,7 +182,7 @@ PolygonCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 72b3a13f58cae8e4f967dc6099c1314a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

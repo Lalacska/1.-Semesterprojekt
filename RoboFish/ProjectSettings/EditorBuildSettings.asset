@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/UI/Main Menu.unity
-    guid: 3dfb7fe14d8e64d4aae4ed66bcfa833d
+    path: Assets/Scenes/UI/Main Menu LauraTest.unity
+    guid: 438f989db6e82154e9fa792a417936c6
   - enabled: 1
     path: Assets/Scenes/Levels/LauraTest.unity
     guid: 8efa19dbb6bfce442b9352dcd6831724
