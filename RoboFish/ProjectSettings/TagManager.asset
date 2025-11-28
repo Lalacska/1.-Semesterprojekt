@@ -69,6 +69,9 @@ TagManager:
   - name: BorderFade
     uniqueID: 1964208967
     locked: 0
+  - name: UIText
+    uniqueID: 411597559
+    locked: 0
   m_RenderingLayers:
   - Default
   - Light Layer 1

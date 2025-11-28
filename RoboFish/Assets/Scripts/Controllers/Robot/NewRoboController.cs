@@ -10,6 +10,7 @@ public class NewRoboController : MonoBehaviour
     public RoboMovementStats moveStats;
     [SerializeField] private Collider2D _feetColl;
     [SerializeField] private Collider2D _bodyColl;
+    [SerializeField] public GameObject failedCanvas;
 
     private Rigidbody2D _rb;
 
@@ -137,7 +138,9 @@ public class NewRoboController : MonoBehaviour
     {
         if (dieTogether)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            failedCanvas.SetActive(true);
+            Time.timeScale = 0;
         }
         else
         {

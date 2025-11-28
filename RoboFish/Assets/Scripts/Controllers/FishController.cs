@@ -22,6 +22,7 @@ public class FishController : MonoBehaviour
     [SerializeField] private float maxSpeed = 5f;
     [SerializeField] private float sinkingForce = 5f;
 
+    [SerializeField] public GameObject failedCanvas;
     //Lever controlls
     LeverController currentLever;
     private IInteractable interactTarget;
@@ -165,7 +166,9 @@ public class FishController : MonoBehaviour
         if (dieTogether)
         {
             //SceneManager.LoadScene("Test2");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            failedCanvas.SetActive(true);
+            Time.timeScale = 0;
         }
         else
         {
