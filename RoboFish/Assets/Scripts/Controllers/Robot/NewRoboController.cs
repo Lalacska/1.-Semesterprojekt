@@ -11,6 +11,7 @@ public class NewRoboController : MonoBehaviour
     [SerializeField] private Collider2D _feetColl;
     [SerializeField] private Collider2D _bodyColl;
     [SerializeField] public GameObject failedCanvas;
+    [SerializeField] private Animator _animator;
 
     private Rigidbody2D _rb;
 
@@ -153,7 +154,7 @@ public class NewRoboController : MonoBehaviour
     {
        if(moveInput!= Vector2.zero)
         {
-
+            _animator.SetBool("IsRunning", true);
             TurnCheck(moveInput);
 
             Vector2 targetVelocity = Vector2.zero;
@@ -163,6 +164,7 @@ public class NewRoboController : MonoBehaviour
         }
        else if(moveInput == Vector2.zero)
         {
+            _animator.SetBool("IsRunning", false);
             _moveVelocity = Vector2.Lerp(_moveVelocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
             _rb.linearVelocity = new Vector2(_moveVelocity.x, _rb.linearVelocity.y);
         }
