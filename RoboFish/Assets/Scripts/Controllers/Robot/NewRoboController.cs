@@ -256,6 +256,7 @@ public class NewRoboController : MonoBehaviour
         if ((_isJumping|| _isFalling)&& _isGrounded&& verticalVelocity <= 0f)
         {
             _isJumping = false;
+            _animator.SetBool("anim_InAir", false);
             _isFalling = false;
             _isFastFalling = false;
             _fastFallTime = 0f;
@@ -270,6 +271,7 @@ public class NewRoboController : MonoBehaviour
         if (!_isJumping)
         {
             _isJumping = true;
+            _animator.SetBool("anim_InAir", true);
         }
 
         _jumpBufferTimer = 0f;
