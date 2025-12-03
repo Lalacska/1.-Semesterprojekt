@@ -14,6 +14,7 @@ public class FishController : MonoBehaviour
     bool dieTogether = false;
     bool _isFacingRight;
 
+
     [SerializeField] private float moveForce = 10f;
     [SerializeField] private float jumpForce = 2f;
     [SerializeField] private float moveForceWater = 200f;
@@ -200,7 +201,8 @@ public class FishController : MonoBehaviour
         movementX = input.x;
         movementY = input.y;
         Debug.Log(movementX);
-        TurnCheck(movementX);
+        TurnCheck(movementX, movementY);
+
     }
 
     void OnAction()
@@ -212,27 +214,67 @@ public class FishController : MonoBehaviour
             interactTarget?.Interact();
         }
     }
-    void TurnCheck(float direction)
+    void TurnCheck(float directionX, float directionY)
     {
-        if(_isFacingRight && direction > 0)
-        {
-            Turn(false);
-        }else if(!_isFacingRight && direction < 0)
-        {
-            Turn(true);
-        }
-    }
-    void Turn(bool turnRight)
-    {
-        if (turnRight)
+
+        if (directionX > 0)
         {
             _isFacingRight = true;
-            transform.Rotate(0f, -180f, 0f);
+            if (directionY > 0)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 20);
+            }
+            else if (directionY < 0)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, -20);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
         }
-        else
+        else if (directionX < 0)
         {
             _isFacingRight = false;
-            transform.Rotate(0f, 180f, 0f);
+            if (directionY > 0)
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 20);
+            }
+            else if (directionY < 0)
+            {
+                transform.rotation = Quaternion.Euler(0, 180, -20);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+        }
+        else if (directionX == 0)
+        {
+            if (directionY > 0)
+            {
+                if (_isFacingRight)
+                    transform.rotation = Quaternion.Euler(0, 0, 20);
+                else
+                    transform.rotation = Quaternion.Euler(0, 180, 20);
+            }
+            else if (directionY < 0)
+            {
+                if (_isFacingRight)
+                    transform.rotation = Quaternion.Euler(0, 0, -20);
+                else
+                    transform.rotation = Quaternion.Euler(0, 180, -20);
+            }
+            else
+            {
+                if (_isFacingRight)
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                else
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
         }
     }
 }
+    
+
+
