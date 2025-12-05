@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4913193856208911936}
   - component: {fileID: 1371271752428956680}
   - component: {fileID: 1720583271227782440}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Fisk32
   m_TagString: Player
   m_Icon: {fileID: 0}
