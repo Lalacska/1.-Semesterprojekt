@@ -114,7 +114,7 @@ public class NewRoboController : MonoBehaviour
             Debug.Log(interactTarget);
         }
 
-        if (collision.gameObject.CompareTag("Water"))
+        if (collision.gameObject.CompareTag("WaterDeath"))
         {
             Dead();
         }

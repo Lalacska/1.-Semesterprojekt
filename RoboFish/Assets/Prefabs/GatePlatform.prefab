@@ -137,8 +137,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -852815005
-  m_SortingLayer: 2
+  m_SortingLayerID: 1581785717
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7ac9d5c23411a28468d5185142f09098, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -212,6 +212,7 @@ MonoBehaviour:
   pointA: {fileID: 4162601218512949772}
   pointB: {fileID: 4036425442522637427}
   movespeed: 0.5
+  sticky: 0
 --- !u!1 &8398288264131172615
 GameObject:
   m_ObjectHideFlags: 0
