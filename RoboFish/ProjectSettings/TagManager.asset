@@ -8,6 +8,7 @@ TagManager:
   - Lever
   - Water
   - SpikeDeath
+  - WaterDeath
   layers:
   - Default
   - TransparentFX
@@ -50,6 +51,9 @@ TagManager:
     locked: 0
   - name: Particles
     uniqueID: 1481881129
+    locked: 0
+  - name: Platforms
+    uniqueID: 1581785717
     locked: 0
   - name: Spikes
     uniqueID: 3102224921
