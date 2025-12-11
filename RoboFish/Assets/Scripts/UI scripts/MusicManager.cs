@@ -10,7 +10,7 @@ public class MusicManager : MonoBehaviour
     public AudioSource drumsSource;
 
 
-    public bool enableDrums = true;
+    public bool enableDrums;
 
     private void Awake()
     {
@@ -40,13 +40,22 @@ public class MusicManager : MonoBehaviour
         {
             UpdateDrums();
         }
+
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            enableDrums = false;
+        }
+        else
+        {
+            enableDrums = true;
+        }
     }
 
 
 
     public void UpdateDrums() //tjekker og sikrer at drums og melodi er in time
     {
-        if(enableDrums = true)
+        if(enableDrums == true)
         {
             if (!drumsSource.isPlaying)
             {
@@ -56,9 +65,13 @@ public class MusicManager : MonoBehaviour
         }
         else
         {
-            if (drumsSource.isPlaying)
+            if (enableDrums == false)
             {
-                drumsSource.Pause();
+
+                if (drumsSource.isPlaying)
+                {
+                    drumsSource.Pause();
+                }
             }
         }
     }
