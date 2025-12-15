@@ -1,0 +1,724 @@
+fileFormatVersion: 2
+guid: 73311a2dae8c8d9469659d4180e2aea3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bomb_0
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 464
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 8, y: 8}
+        - {x: 4, y: 8}
+        - {x: 4, y: -6}
+        - {x: 4, y: -8}
+        - {x: 8, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a803a3b224f2c468faed8471d473c6
+      internalID: -1099929941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_1
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 464
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -4, y: 8}
+        - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: -4, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 867c444ca2eb9ce42a2b1e715ca89a12
+      internalID: 515057085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 2, y: 8}
+        - {x: -2, y: 8}
+        - {x: -2, y: -8}
+        - {x: 2, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e6b8646768879848902a32ee2cc848b
+      internalID: 888088295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 448
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 8, y: 8}
+        - {x: 4, y: 8}
+        - {x: 4, y: -6}
+        - {x: 4, y: -8}
+        - {x: 8, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2809853bd1fdca4a8504ff8976b5245
+      internalID: -1174953666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_4
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 448
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -4, y: 8}
+        - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: -4, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8a9e23ad0785444b257ab463439ded
+      internalID: 2012322438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 432
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 7.0000305, y: -4.967865}
+        - {x: 6, y: -5}
+        - {x: 6, y: -2}
+        - {x: 7, y: -2}
+        - {x: 7, y: -1}
+        - {x: 8, y: -1}
+        - {x: 8, y: 1}
+        - {x: 7, y: 1}
+        - {x: 7, y: 2}
+        - {x: 6, y: 2}
+        - {x: 6, y: 5}
+        - {x: 7, y: 5}
+        - {x: 7, y: 7}
+        - {x: 5, y: 7}
+        - {x: 5, y: 6}
+        - {x: 2, y: 6}
+        - {x: 2, y: 7}
+        - {x: 1, y: 7}
+        - {x: 1, y: 8}
+        - {x: -1, y: 8}
+        - {x: -1, y: 7}
+        - {x: -2, y: 7}
+        - {x: -2, y: 6}
+        - {x: -5, y: 6}
+        - {x: -5, y: 7}
+        - {x: -7, y: 7}
+        - {x: -7, y: 5}
+        - {x: -6, y: 5}
+        - {x: -6, y: 2}
+        - {x: -7, y: 2}
+        - {x: -7, y: 0.97598267}
+        - {x: -8, y: 1}
+        - {x: -8, y: -1}
+        - {x: -7, y: -1}
+        - {x: -7, y: -2}
+        - {x: -6, y: -2}
+        - {x: -6, y: -5}
+        - {x: -7, y: -5}
+        - {x: -7, y: -7}
+        - {x: -5, y: -7}
+        - {x: -5, y: -6}
+        - {x: -2, y: -6}
+        - {x: -2, y: -7}
+        - {x: -1, y: -7}
+        - {x: -1, y: -8}
+        - {x: 1, y: -8}
+        - {x: 1, y: -7}
+        - {x: 2.0059204, y: -7}
+        - {x: 2, y: -6}
+        - {x: 5, y: -6}
+        - {x: 5, y: -7}
+        - {x: 7, y: -7}
+      - - {x: 6, y: 5}
+        - {x: 6, y: 5}
+        - {x: 6, y: 5}
+        - {x: 6, y: 5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e41b250cafe4641973cbedb5c68dea
+      internalID: 1148640761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_6
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 432
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 8, y: 8}
+        - {x: 6, y: 8}
+        - {x: 6, y: 6}
+        - {x: 4, y: 6}
+        - {x: 4, y: 4}
+        - {x: -2, y: 4}
+        - {x: -2, y: 6}
+        - {x: -6, y: 6}
+        - {x: -6, y: 2}
+        - {x: -4, y: 2}
+        - {x: -4, y: -4}
+        - {x: -6, y: -4}
+        - {x: -6, y: -6}
+        - {x: -8, y: -6}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e68e53238f1024cac542fef6ec42b4
+      internalID: -1810774213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 432
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -6}
+        - {x: 6, y: -6}
+        - {x: 6, y: -4}
+        - {x: 4, y: -4}
+        - {x: 4, y: 2}
+        - {x: 6, y: 2}
+        - {x: 6, y: 6}
+        - {x: 2, y: 6}
+        - {x: 2, y: 4}
+        - {x: -4, y: 4}
+        - {x: -4, y: 6}
+        - {x: -6, y: 6}
+        - {x: -6, y: 8}
+        - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e77e5d5823246e47962c1af711dc898
+      internalID: 2142935415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 432
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 7.0000305, y: -4.967865}
+        - {x: 6, y: -5}
+        - {x: 6, y: -2}
+        - {x: 7, y: -2}
+        - {x: 7, y: -1}
+        - {x: 8, y: -1}
+        - {x: 8, y: 1}
+        - {x: 7, y: 1}
+        - {x: 7, y: 2}
+        - {x: 6, y: 2}
+        - {x: 6, y: 5}
+        - {x: 7, y: 5}
+        - {x: 7, y: 7}
+        - {x: 5, y: 7}
+        - {x: 5, y: 6}
+        - {x: 2, y: 6}
+        - {x: 2, y: 7}
+        - {x: 1, y: 7}
+        - {x: 1, y: 8}
+        - {x: -1, y: 8}
+        - {x: -1, y: 7}
+        - {x: -2, y: 7}
+        - {x: -2, y: 6}
+        - {x: -5, y: 6}
+        - {x: -5, y: 7}
+        - {x: -7, y: 7}
+        - {x: -7, y: 5}
+        - {x: -6, y: 5}
+        - {x: -6, y: 2}
+        - {x: -7, y: 2}
+        - {x: -7, y: 0.97598267}
+        - {x: -8, y: 1}
+        - {x: -8, y: -1}
+        - {x: -7, y: -1}
+        - {x: -7, y: -2}
+        - {x: -6, y: -2}
+        - {x: -6, y: -5}
+        - {x: -7, y: -5}
+        - {x: -7, y: -7}
+        - {x: -5, y: -7}
+        - {x: -5, y: -6}
+        - {x: -2, y: -6}
+        - {x: -2, y: -7}
+        - {x: -1, y: -7}
+        - {x: -1, y: -8}
+        - {x: 1, y: -8}
+        - {x: 1, y: -7}
+        - {x: 2.0059204, y: -7}
+        - {x: 2, y: -6}
+        - {x: 5, y: -6}
+        - {x: 5, y: -7}
+        - {x: 7, y: -7}
+      - - {x: 6, y: 5}
+        - {x: 6, y: 5}
+        - {x: 6, y: 5}
+        - {x: 6, y: 5}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032fff372c6977d4f9adc799cf468f21
+      internalID: 32518125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 432
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 8, y: 8}
+        - {x: 6, y: 8}
+        - {x: 6, y: 6}
+        - {x: 4, y: 6}
+        - {x: 4, y: 4}
+        - {x: -2, y: 4}
+        - {x: -2, y: 6}
+        - {x: -6, y: 6}
+        - {x: -6, y: 2}
+        - {x: -4, y: 2}
+        - {x: -4, y: -4}
+        - {x: -6, y: -4}
+        - {x: -6, y: -6}
+        - {x: -8, y: -6}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95fea8000ca6ca4449b9ddecbe6386b8
+      internalID: 1049279866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_10
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 432
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -6}
+        - {x: 6, y: -6}
+        - {x: 6, y: -4}
+        - {x: 4, y: -4}
+        - {x: 4, y: 2}
+        - {x: 6, y: 2}
+        - {x: 6, y: 6}
+        - {x: 2, y: 6}
+        - {x: 2, y: 4}
+        - {x: -4, y: 4}
+        - {x: -4, y: 6}
+        - {x: -6, y: 6}
+        - {x: -6, y: 8}
+        - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: 8, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e991cc54c92bbc04e876dd50f2577968
+      internalID: -1945895293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_11
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 416
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 8, y: 8}
+        - {x: -8, y: 8}
+        - {x: -8, y: 6}
+        - {x: -6, y: 6}
+        - {x: -6, y: 4}
+        - {x: -4, y: 4}
+        - {x: -4, y: -2}
+        - {x: -6, y: -2}
+        - {x: -6, y: -6}
+        - {x: -2, y: -6}
+        - {x: -2, y: -4}
+        - {x: 4, y: -4}
+        - {x: 4, y: -6}
+        - {x: 6, y: -6}
+        - {x: 6.0175247, y: -8}
+        - {x: 8, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8400a2f1c06126c41832998c3170602e
+      internalID: -1234252478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 416
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 6, y: -2}
+        - {x: 4, y: -2}
+        - {x: 4, y: 4}
+        - {x: 6, y: 4}
+        - {x: 6, y: 6}
+        - {x: 8, y: 6}
+        - {x: 8, y: 8}
+        - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: -6, y: -8}
+        - {x: -6, y: -6}
+        - {x: -4, y: -6}
+        - {x: -4, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: -6}
+        - {x: 6, y: -6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba59b1596e8be947aedb6f9e355fa1f
+      internalID: 1164131396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_13
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 416
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 8, y: 8}
+        - {x: -8, y: 8}
+        - {x: -8, y: 6}
+        - {x: -6, y: 6}
+        - {x: -6, y: 4}
+        - {x: -4, y: 4}
+        - {x: -4, y: -2}
+        - {x: -6, y: -2}
+        - {x: -6, y: -6}
+        - {x: -2, y: -6}
+        - {x: -2, y: -4}
+        - {x: 4, y: -4}
+        - {x: 4, y: -6}
+        - {x: 6, y: -6}
+        - {x: 6.0175247, y: -8}
+        - {x: 8, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4614b69fef298b742bd51287470ce443
+      internalID: -70547100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb_14
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 416
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 6, y: -2}
+        - {x: 4, y: -2}
+        - {x: 4, y: 4}
+        - {x: 6, y: 4}
+        - {x: 6, y: 6}
+        - {x: 8, y: 6}
+        - {x: 8, y: 8}
+        - {x: -8, y: 8}
+        - {x: -8, y: -8}
+        - {x: -6, y: -8}
+        - {x: -6, y: -6}
+        - {x: -4, y: -6}
+        - {x: -4, y: -4}
+        - {x: 2, y: -4}
+        - {x: 2, y: -6}
+        - {x: 6, y: -6}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b3578eab9dbed54eb176ee2bcdb87a6
+      internalID: 1782310769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 803055da61eee6a42b7620d3d7ecd24c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Bomb_0: -1099929941
+      Bomb_1: 515057085
+      Bomb_10: -1945895293
+      Bomb_11: -1234252478
+      Bomb_12: 1164131396
+      Bomb_13: -70547100
+      Bomb_14: 1782310769
+      Bomb_2: 888088295
+      Bomb_3: -1174953666
+      Bomb_4: 2012322438
+      Bomb_5: 1148640761
+      Bomb_6: -1810774213
+      Bomb_7: 2142935415
+      Bomb_8: 32518125
+      Bomb_9: 1049279866
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
