@@ -1626,6 +1626,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 830649256492243989, guid: 2323a90bb699ff7439dff216b890c25e, type: 3}
+      propertyPath: selectedColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 830649256492243989, guid: 2323a90bb699ff7439dff216b890c25e, type: 3}
       propertyPath: Gates.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -20606,6 +20610,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2012293005}
     m_Modifications:
     - target: {fileID: 830649256492243989, guid: 2323a90bb699ff7439dff216b890c25e, type: 3}
+      propertyPath: selectedColor
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 830649256492243989, guid: 2323a90bb699ff7439dff216b890c25e, type: 3}
       propertyPath: Gates.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -20657,6 +20665,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeverNew
       objectReference: {fileID: 0}
+    - target: {fileID: 5788030096451100360, guid: 2323a90bb699ff7439dff216b890c25e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1302666783, guid: 16fc3cf9eea5370418b57938419121ec, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
