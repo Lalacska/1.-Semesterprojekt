@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9bcbd9dda01520645bab3f4b921314a2
+guid: 37fd6ad14a759fd4fa25c2a1e4d261a6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,95 +97,75 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AnimatedSpikes_0
+      name: BombBig_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 128
-        width: 12
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4791cf2caf6b1e4f883d9529c591222
-      internalID: -1923388880
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnimatedSpikes_1
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 96
-        width: 12
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9367505af635d2645b0dac93fe587fed
-      internalID: 807260324
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnimatedSpikes_2
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 64
-        width: 14
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6d06467c9789bc46a95b3f2298c574c
-      internalID: 912446255
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AnimatedSpikes_3
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 32
-        width: 16
-        height: 16
+        x: 304
+        y: 368
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape:
-      - - {x: 6, y: 4}
-        - {x: 5, y: 6}
-        - {x: -5, y: 6}
-        - {x: -6, y: 4}
-        - {x: -8, y: -8}
-        - {x: 8, y: -8}
+      - - {x: 14, y: -10}
+        - {x: 12, y: -10}
+        - {x: 12, y: -4}
+        - {x: 14, y: -4}
+        - {x: 14, y: -2}
+        - {x: 16, y: -2}
+        - {x: 16, y: 2}
+        - {x: 14, y: 2}
+        - {x: 14, y: 4}
+        - {x: 12, y: 4}
+        - {x: 12, y: 10}
+        - {x: 14, y: 10}
+        - {x: 14, y: 14}
+        - {x: 10, y: 14}
+        - {x: 10, y: 12}
+        - {x: 4, y: 12}
+        - {x: 4, y: 14}
+        - {x: 2, y: 14}
+        - {x: 2, y: 16}
+        - {x: -2, y: 16}
+        - {x: -2, y: 14}
+        - {x: -4, y: 14}
+        - {x: -4, y: 12}
+        - {x: -10, y: 12}
+        - {x: -10, y: 14}
+        - {x: -14, y: 14}
+        - {x: -14, y: 10}
+        - {x: -12, y: 10}
+        - {x: -12, y: 4}
+        - {x: -14, y: 4}
+        - {x: -14, y: 2}
+        - {x: -16, y: 2}
+        - {x: -16, y: -2}
+        - {x: -14, y: -2.1279907}
+        - {x: -14, y: -4}
+        - {x: -12, y: -4}
+        - {x: -12, y: -10}
+        - {x: -14, y: -9.93573}
+        - {x: -14, y: -14}
+        - {x: -10, y: -14}
+        - {x: -10, y: -12}
+        - {x: -4, y: -12}
+        - {x: -4, y: -14}
+        - {x: -2, y: -14}
+        - {x: -2, y: -16}
+        - {x: 2, y: -16}
+        - {x: 2, y: -14}
+        - {x: 4, y: -14}
+        - {x: 4, y: -12}
+        - {x: 10, y: -12}
+        - {x: 10, y: -14}
+        - {x: 14, y: -14}
       tessellationDetail: 0
       bones: []
-      spriteID: 1d1a9ec2ddf75d04591ed9ce2b57443a
-      internalID: 687168611
+      spriteID: d57e62d8231c4794f9b520b1e32c2fe0
+      internalID: -2056075922
       vertices: []
       indices: 
       edges: []
@@ -194,7 +174,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 87399f0d385b6ef47a9bc8ad970e00c2
+    spriteID: 40d38b748999a094fa3034a69d5556a0
     internalID: 0
     vertices: []
     indices: 
@@ -204,10 +184,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      AnimatedSpikes_0: -1923388880
-      AnimatedSpikes_1: 807260324
-      AnimatedSpikes_2: 912446255
-      AnimatedSpikes_3: 687168611
+      BombBig_0: -2056075922
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
