@@ -9,10 +9,13 @@ public class LeverController : MonoBehaviour, IInteractable
     {
         //0 grøn 1 rød 2 gul 3hvid
 
-        Grøn = 0,
-        Rød = 1,
-        Gul = 2,
-        Hvid = 3
+        Green = 0,
+        Red = 1,
+        Yellow = 2,
+        White = 3,
+        Blue = 4,
+        Purple = 5,
+        Pink = 6
     }
 
     public ColorChoice selectedColor;
