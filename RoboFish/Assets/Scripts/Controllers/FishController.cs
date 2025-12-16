@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -31,6 +32,8 @@ public class FishController : MonoBehaviour
 
     //Win Condition
     public bool isWinning = false;
+
+    public bool isGroundedInWater = false;
 
     private void Awake()
     {
@@ -70,11 +73,17 @@ public class FishController : MonoBehaviour
             // Calculate the difference between current velocity and desired velocity
             Vector2 velocityChange = desiredVelocity - rb.linearVelocity;
 
-            // Apply only the needed force to move toward desired velocity
-            rb.AddForce(velocityChange * moveForceWater * Time.fixedDeltaTime, ForceMode2D.Force);
-
+            if (input.sqrMagnitude > 0.001f)
+            {
+                rb.AddForce(velocityChange * moveForceWater * Time.fixedDeltaTime, ForceMode2D.Force);
+            }
+            else if (isGroundedInWater)
+            {
+                // HARD STOP when resting
+                rb.linearVelocity = Vector2.zero;
+            }
             // Gentle sinking when not pressing up
-            if (movementY <= 0.01f)
+            if (movementY <= 0.01f && !isGroundedInWater)
             {
                 rb.AddForce(Vector2.down * sinkingForce, ForceMode2D.Force);
             }
@@ -90,21 +99,18 @@ public class FishController : MonoBehaviour
             rb.AddForce(velocityChange * moveForce * Time.fixedDeltaTime, ForceMode2D.Force);
         }
 
-        //// Particle handling in FixedUpdate (after movement code)
-        //if (part != null && inWater)
-        //{
-        //    var emission = part.emission;
 
-        //    // Only emit if the fish is actually moving in water
-        //    if (rb.linearVelocity.magnitude > 0.1f)
-        //    {
-        //        emission.enabled = true;
-        //    }
-        //    else
-        //    {
-        //        emission.enabled = false;
-        //    }
-        //}
+        // Particle handling
+        if (part == null) return;
+
+        ParticleSystem.EmissionModule emission = part.emission;
+
+        bool shouldEmit =
+            inWater &&
+            !isGroundedInWater &&
+            rb.linearVelocity.magnitude > 0.1f;
+
+        emission.enabled = shouldEmit;
 
     }
 
@@ -118,10 +124,6 @@ public class FishController : MonoBehaviour
 
             rb.linearVelocity *= 0.5f;
             rb.linearDamping = waterDrag;
-        }
-        if (other.CompareTag("Platform") && !other.CompareTag("Water"))
-        {
-            Debug.Log("I died?");
         }
         if (other.CompareTag("SpikeDeath"))
         {
@@ -176,20 +178,32 @@ public class FishController : MonoBehaviour
             transform.position = originalPos;
         }
     }
-    public void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Platform") && inWater)
+        {
+            isGroundedInWater = true;
+        }
+
         if (collision.gameObject.CompareTag("Finish"))
         {
             isWinning = true;
         }
     }
-    public void OnCollisionExit2D(Collision2D collision)
+
+    void OnCollisionExit2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Platform") && inWater)
+        {
+            isGroundedInWater = false;
+        }
+
         if (collision.gameObject.CompareTag("Finish"))
         {
             isWinning = false;
         }
     }
+
     // This function is called when a move input is detected.
     void OnMove(InputValue movementValue)
     {
@@ -205,6 +219,7 @@ public class FishController : MonoBehaviour
 
     }
 
+    // This function is called when action button is pushed
     void OnAction()
     {
         if (!actionButtonPressed)
