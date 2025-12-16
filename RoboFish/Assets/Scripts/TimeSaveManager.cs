@@ -32,7 +32,12 @@ public class TimeSaveManager : MonoBehaviour
 
     public static int TimeStringToSeconds(string timeString)
     {
+        Debug.Log(timeString);
         string[] parts = timeString.Split(':');
+        foreach (string part in parts)
+        {
+            Debug.Log(part);
+        }
         int minutes = int.Parse(parts[0]);
         int seconds = int.Parse(parts[1]);
         return minutes * 60 + seconds;

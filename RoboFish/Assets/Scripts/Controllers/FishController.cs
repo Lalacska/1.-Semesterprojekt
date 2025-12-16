@@ -73,7 +73,7 @@ public class FishController : MonoBehaviour
             // Calculate the difference between current velocity and desired velocity
             Vector2 velocityChange = desiredVelocity - rb.linearVelocity;
 
-            if (input.sqrMagnitude > 0.001f)
+            if (input.sqrMagnitude > 0.001f || !isGroundedInWater)
             {
                 rb.AddForce(velocityChange * moveForceWater * Time.fixedDeltaTime, ForceMode2D.Force);
             }
@@ -82,6 +82,7 @@ public class FishController : MonoBehaviour
                 // HARD STOP when resting
                 rb.linearVelocity = Vector2.zero;
             }
+
             // Gentle sinking when not pressing up
             if (movementY <= 0.01f && !isGroundedInWater)
             {
@@ -182,13 +183,33 @@ public class FishController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Platform") && inWater)
         {
-            isGroundedInWater = true;
+            if (CheckGrounded())
+            {
+                isGroundedInWater = true;
+            }
         }
 
         if (collision.gameObject.CompareTag("Finish"))
         {
             isWinning = true;
         }
+    }
+
+    // Simple ground check using a small raycast
+    bool CheckGrounded()
+    {
+        CircleCollider2D col = GetComponent<CircleCollider2D>();
+        if (col == null) return false;
+
+        // start a little above the bottom of the circle
+        Vector2 origin = new Vector2(transform.position.x, transform.position.y - col.radius + 0.01f);
+        float distance = 0.05f; // how far below to check
+        LayerMask groundMask = LayerMask.GetMask("Ground");
+
+        RaycastHit2D hit = Physics2D.Raycast(origin, Vector2.down, distance, groundMask);
+        Debug.DrawRay(origin, Vector2.down * distance, Color.red); // visualize in Scene view
+
+        return hit.collider != null;
     }
 
     void OnCollisionExit2D(Collision2D collision)
@@ -214,7 +235,6 @@ public class FishController : MonoBehaviour
         // Store the X and Y components of the movement.
         movementX = input.x;
         movementY = input.y;
-        Debug.Log(movementX);
         TurnCheck(movementX, movementY);
 
     }
@@ -229,6 +249,7 @@ public class FishController : MonoBehaviour
             interactTarget?.Interact();
         }
     }
+
     void TurnCheck(float directionX, float directionY)
     {
 
@@ -290,6 +311,6 @@ public class FishController : MonoBehaviour
         }
     }
 }
-    
+
 
 

@@ -6,14 +6,38 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/UI/Main Menu LauraTest.unity
-    guid: 438f989db6e82154e9fa792a417936c6
+    path: Assets/Scenes/UI/Main Menu.unity
+    guid: 3dfb7fe14d8e64d4aae4ed66bcfa833d
   - enabled: 1
-    path: Assets/Scenes/Levels/LauraTest.unity
-    guid: 8efa19dbb6bfce442b9352dcd6831724
+    path: Assets/Scenes/Levels/Emin/EminLevel1.unity
+    guid: 951a7325f8ec11f42932710816654232
   - enabled: 1
-    path: Assets/Scenes/Levels/LauraTest2.unity
-    guid: 14aaa87567a3b1f4d9063f91e275053e
+    path: Assets/Scenes/Levels/Emin/EminLevel2.unity
+    guid: 5e4b744e0aa17404f81bda657d8eacf7
+  - enabled: 1
+    path: Assets/Scenes/Levels/VastLevel1.unity
+    guid: d92834e5fb7da754aa1c7bd15f2cc103
+  - enabled: 1
+    path: Assets/Scenes/Laura Special Level.unity
+    guid: a7ffeaa76363c6348b371883fa9c6520
+  - enabled: 1
+    path: Assets/Scenes/Levels/RoseLevel3.unity
+    guid: efdb2c542f81d75428d59d8d85fb3e49
+  - enabled: 1
+    path: Assets/Scenes/Laura Level 2.unity
+    guid: c753729ab5f07c049a7027a32da7ecea
+  - enabled: 1
+    path: Assets/Scenes/Levels/Emin/EminLevel3.unity
+    guid: b4c7ed789c5525243bab07e4f24e4965
+  - enabled: 1
+    path: Assets/Scenes/Levels/Emin/EminLevel4.unity
+    guid: 732ffa33c64c47048804a6e32fbe2d8a
+  - enabled: 1
+    path: Assets/Scenes/Levels/RoseLevel2New.unity
+    guid: 8d9ae0688ae060e49b67254f0e0c972b
+  - enabled: 1
+    path: Assets/Scenes/Levels/RoseChallengeLevel.unity
+    guid: 1c9ecd69aeb202a438e3013937ae3e3f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
