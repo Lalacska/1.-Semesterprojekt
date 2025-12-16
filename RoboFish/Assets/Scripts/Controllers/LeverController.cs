@@ -5,6 +5,18 @@ using UnityEngine;
 
 public class LeverController : MonoBehaviour, IInteractable
 {
+    public enum ColorChoice
+    {
+        //0 grøn 1 rød 2 gul 3hvid
+
+        Grøn = 0,
+        Rød = 1,
+        Gul = 2,
+        Hvid = 3
+    }
+
+    public ColorChoice selectedColor;
+
     //[SerializeField] GameObject gate;
     //public GatePlatform gateScript;
 
@@ -12,10 +24,12 @@ public class LeverController : MonoBehaviour, IInteractable
     List<GatePlatform> Gates;
     [SerializeField] private Animator _animator;
     public bool isFlipped = false;
-    public int color;
+    int color;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        color = (int)selectedColor;
         _animator.SetInteger("Color", color);
         //gateScript = gate.GetComponent<GatePlatform>();
     }
