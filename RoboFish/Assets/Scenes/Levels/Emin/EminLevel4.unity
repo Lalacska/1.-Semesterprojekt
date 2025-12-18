@@ -15999,10 +15999,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 293401524189029289, guid: a3077f3df1724a845bbba726c2fec1c5, type: 3}
-      propertyPath: totalTime
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 1490543396315363916, guid: a3077f3df1724a845bbba726c2fec1c5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.938474
@@ -16047,9 +16043,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause and Timer
       objectReference: {fileID: 0}
+    - target: {fileID: 4889452732776750784, guid: a3077f3df1724a845bbba726c2fec1c5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 2226485002093434252, guid: a3077f3df1724a845bbba726c2fec1c5, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3077f3df1724a845bbba726c2fec1c5, type: 3}
