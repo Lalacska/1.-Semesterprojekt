@@ -30,7 +30,10 @@ public class LevelManager : MonoBehaviour
             Win();
         }
     }
-
+    private void Start()
+    {
+        Time.timeScale = 1;
+    }
 
     void Win()
     {
