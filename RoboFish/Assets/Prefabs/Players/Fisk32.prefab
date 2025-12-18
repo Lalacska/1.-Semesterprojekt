@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inWater: 0
+  dieTogether: 1
   moveForce: 10
   jumpForce: 2
   moveForceWater: 40

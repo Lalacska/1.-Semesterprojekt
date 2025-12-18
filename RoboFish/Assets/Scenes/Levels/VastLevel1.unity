@@ -184,20 +184,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5106721476796061565, guid: df525e903fa72f141b0c037c34762e9e, type: 3}
-      propertyPath: jumpForce
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5106721476796061565, guid: df525e903fa72f141b0c037c34762e9e, type: 3}
       propertyPath: failedCanvas
       value: 
       objectReference: {fileID: 997069379}
     - target: {fileID: 8699800274135919529, guid: df525e903fa72f141b0c037c34762e9e, type: 3}
       propertyPath: m_Name
       value: Fisk32
-      objectReference: {fileID: 0}
-    - target: {fileID: 8699800274135919529, guid: df525e903fa72f141b0c037c34762e9e, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1899,7 +1891,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelManager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8342124938701016141, guid: ac4b83c06a3856e47bfb25a663bbd8f8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
