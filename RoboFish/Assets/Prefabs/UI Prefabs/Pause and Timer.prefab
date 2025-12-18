@@ -2123,6 +2123,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1490543396315363916}
     m_Modifications:
     - target: {fileID: 2251431750559023354, guid: 52d6c70ff27cea44ab4c3c8b1874670a, type: 3}
+      propertyPath: totalTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2251431750559023354, guid: 52d6c70ff27cea44ab4c3c8b1874670a, type: 3}
       propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 1847180236967701596}
@@ -2206,12 +2210,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7600511611389458132, guid: 52d6c70ff27cea44ab4c3c8b1874670a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600511611389458132, guid: 52d6c70ff27cea44ab4c3c8b1874670a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600511611389458132, guid: 52d6c70ff27cea44ab4c3c8b1874670a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
+      objectReference: {fileID: 0}
     - target: {fileID: 8760660913841755561, guid: 52d6c70ff27cea44ab4c3c8b1874670a, type: 3}
       propertyPath: m_Name
       value: TimerCanvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 417425526551000799, guid: 52d6c70ff27cea44ab4c3c8b1874670a, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52d6c70ff27cea44ab4c3c8b1874670a, type: 3}

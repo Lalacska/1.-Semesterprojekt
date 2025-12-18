@@ -14,6 +14,7 @@ namespace PauseMenu
             if (isPaused)
             {
                 pauseMenu.SetActive(false);
+                Resume();
                 isPaused = false;
             }
             else

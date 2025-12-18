@@ -130,7 +130,6 @@ public class FishController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("a");
         if (other.CompareTag("Water"))
         {
             rb.gravityScale = 0f;
