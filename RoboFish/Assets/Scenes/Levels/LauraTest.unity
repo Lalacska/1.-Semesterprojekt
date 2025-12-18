@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &301657683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1847180236967701596, guid: a3077f3df1724a845bbba726c2fec1c5, type: 3}
+  m_PrefabInstance: {fileID: 1375169313}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &302073193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -175,6 +180,18 @@ PrefabInstance:
       propertyPath: timerScript
       value: 
       objectReference: {fileID: 1375169314}
+    - target: {fileID: 2136275763728377487, guid: ac4b83c06a3856e47bfb25a663bbd8f8, type: 3}
+      propertyPath: completedCanvas
+      value: 
+      objectReference: {fileID: 877151359}
+    - target: {fileID: 2136275763728377487, guid: ac4b83c06a3856e47bfb25a663bbd8f8, type: 3}
+      propertyPath: completedTimeText
+      value: 
+      objectReference: {fileID: 812812711}
+    - target: {fileID: 2136275763728377487, guid: ac4b83c06a3856e47bfb25a663bbd8f8, type: 3}
+      propertyPath: completedTimeObject
+      value: 
+      objectReference: {fileID: 812812711}
     - target: {fileID: 4246410984913870673, guid: ac4b83c06a3856e47bfb25a663bbd8f8, type: 3}
       propertyPath: m_Name
       value: LevelManager
@@ -19586,6 +19603,11 @@ Transform:
   - {fileID: 582203863}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &812812711 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1679411724769281175, guid: 6ba2c9cba27e4364a99bc08760465e50, type: 3}
+  m_PrefabInstance: {fileID: 877151358}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &877151358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19740,6 +19762,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5106721476796061565, guid: df525e903fa72f141b0c037c34762e9e, type: 3}
+      propertyPath: failedCanvas
+      value: 
+      objectReference: {fileID: 301657683}
     - target: {fileID: 8699800274135919529, guid: df525e903fa72f141b0c037c34762e9e, type: 3}
       propertyPath: m_Name
       value: Fisk32
@@ -19768,6 +19794,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 715074113309602755, guid: 4e33c1644d26b454ba5753a1d6518ed5, type: 3}
+      propertyPath: failedCanvas
+      value: 
+      objectReference: {fileID: 301657683}
     - target: {fileID: 5898712897018563041, guid: 4e33c1644d26b454ba5753a1d6518ed5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.41
