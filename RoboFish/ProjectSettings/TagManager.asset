@@ -52,6 +52,9 @@ TagManager:
   - name: Particles
     uniqueID: 1481881129
     locked: 0
+  - name: Puddles
+    uniqueID: 1182215143
+    locked: 0
   - name: Platforms
     uniqueID: 1581785717
     locked: 0
