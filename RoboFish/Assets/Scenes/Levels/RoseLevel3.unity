@@ -1999,6 +1999,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 830649256492243989, guid: 2323a90bb699ff7439dff216b890c25e, type: 3}
+      propertyPath: selectedColor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 830649256492243989, guid: 2323a90bb699ff7439dff216b890c25e, type: 3}
       propertyPath: Gates.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -5241,6 +5245,10 @@ PrefabInstance:
     - target: {fileID: 830649256492243989, guid: 2323a90bb699ff7439dff216b890c25e, type: 3}
       propertyPath: isFlipped
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 830649256492243989, guid: 2323a90bb699ff7439dff216b890c25e, type: 3}
+      propertyPath: selectedColor
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 830649256492243989, guid: 2323a90bb699ff7439dff216b890c25e, type: 3}
       propertyPath: Gates.Array.size
