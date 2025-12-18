@@ -15,9 +15,19 @@ public class TimeSaveManager : MonoBehaviour
 
     public bool BetterTime(string time)
     {
-        string oldTime = PlayerPrefs.GetString(levelName);
-        int oldTimeInInt  = TimeStringToSeconds(oldTime);
-        int newTimeInInt = TimeStringToSeconds(time);
+        string oldTime = PlayerPrefs.GetString(levelName, "00:00");
+        int oldTimeInInt;
+
+        if (!string.IsNullOrEmpty(oldTime) && oldTime != "00:00")
+        {
+            oldTimeInInt = TimeStringToSeconds(oldTime, "oldtime");
+        }
+        else
+        {
+            oldTimeInInt = 0;
+        }
+
+        int newTimeInInt = TimeStringToSeconds(time, "newtime");
         Debug.Log(oldTime);
         if (oldTimeInInt > newTimeInInt || oldTime == "00:00")
         {
@@ -30,9 +40,9 @@ public class TimeSaveManager : MonoBehaviour
         }
     }
 
-    public static int TimeStringToSeconds(string timeString)
+    public static int TimeStringToSeconds(string timeString, string name)
     {
-        Debug.Log(timeString);
+        Debug.Log(name + ": " + timeString);
         string[] parts = timeString.Split(':');
         foreach (string part in parts)
         {

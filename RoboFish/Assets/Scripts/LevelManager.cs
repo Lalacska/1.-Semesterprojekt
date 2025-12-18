@@ -1,9 +1,10 @@
+using TMPro;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
     [SerializeField]
-    GameObject go;
+    GameObject completedCanvas;
 
     [SerializeField]
     TimerScript timerScript;
@@ -11,6 +12,14 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     TimeSaveManager timeSaveManager;
 
+    [SerializeField]
+    GameObject completedTimeObject;
+    TextMeshProUGUI completedTimeText;
+
+    private void Awake()
+    {
+        completedTimeText = completedTimeObject.GetComponent<TextMeshProUGUI>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -28,7 +37,8 @@ public class LevelManager : MonoBehaviour
         string usedTime = timerScript.UsedTime();
         timeSaveManager.SaveTime(usedTime);
         Debug.Log("You have won!");
-        go.SetActive(true);
+        completedCanvas.SetActive(true);
+        completedTimeText.text = usedTime;
     }
 
     
