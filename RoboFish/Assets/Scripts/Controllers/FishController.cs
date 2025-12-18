@@ -23,6 +23,7 @@ public class FishController : MonoBehaviour
     [SerializeField] private float airDrag = 0.5f;
     [SerializeField] private float maxSpeed = 5f;
     [SerializeField] private float sinkingForce = 5f;
+    [SerializeField] private Animator _animator;
 
     [SerializeField] public GameObject failedCanvas;
     //Lever controlls
@@ -34,6 +35,7 @@ public class FishController : MonoBehaviour
     public bool isWinning = false;
 
     public bool isGroundedInWater = false;
+    private bool swimming;
 
     private void Awake()
     {
@@ -58,6 +60,16 @@ public class FishController : MonoBehaviour
         if (Keyboard.current.eKey.wasReleasedThisFrame)
         {
             actionButtonPressed = false;
+        }
+        if (inWater && rb.linearVelocity.magnitude > 0.1f)
+        {
+            swimming = true;
+            _animator.SetBool("anim_swimming", true);
+        }
+        else
+        {
+            swimming = false;
+            _animator.SetBool("anim_swimming", false);
         }
     }
 

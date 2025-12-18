@@ -1,4 +1,5 @@
-﻿using UnityEditor.Experimental.GraphView;
+﻿using System.Collections;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -137,14 +138,26 @@ public class NewRoboController : MonoBehaviour
 
     void Dead()
     {
+        _animator.SetBool("anim_dead", true);
+        StartCoroutine(DeathAnimation());
+    }
+    
+    IEnumerator DeathAnimation()
+    {
         if (dieTogether)
         {
+            _animator.SetBool("anim_dead", true);
+            yield return new WaitForSeconds(0.5f);
+            _animator.SetBool("anim_dead", false);
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             failedCanvas.SetActive(true);
             Time.timeScale = 0;
         }
         else
         {
+            _animator.SetBool("anim_dead", true);
+            yield return new WaitForSeconds(0.5f);
+            _animator.SetBool("anim_dead", false);
             transform.position = originalPos;
         }
     }
