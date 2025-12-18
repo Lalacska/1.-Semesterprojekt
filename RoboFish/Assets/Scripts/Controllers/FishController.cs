@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class FishController : MonoBehaviour
 {
@@ -179,15 +180,25 @@ public class FishController : MonoBehaviour
 
     void Dead()
     {
+        _animator.SetBool("anim_dead", true);
+        StartCoroutine(DeathAnimation());
+    }
+    IEnumerator DeathAnimation()
+    {
         if (dieTogether)
         {
-            //SceneManager.LoadScene("Test2");
+            _animator.SetBool("anim_dead", true);
+            yield return new WaitForSeconds(0.7f);
+            _animator.SetBool("anim_dead", false);
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             failedCanvas.SetActive(true);
             Time.timeScale = 0;
         }
         else
         {
+            _animator.SetBool("anim_dead", true);
+            yield return new WaitForSeconds(0.7f);
+            _animator.SetBool("anim_dead", false);
             transform.position = originalPos;
         }
     }
