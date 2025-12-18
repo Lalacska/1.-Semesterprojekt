@@ -145,7 +145,7 @@ public class NewRoboController : MonoBehaviour
         if (dieTogether)
         {
             _animator.SetBool("anim_dead", true);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.7f);
             _animator.SetBool("anim_dead", false);
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             failedCanvas.SetActive(true);
@@ -154,7 +154,7 @@ public class NewRoboController : MonoBehaviour
         else
         {
             _animator.SetBool("anim_dead", true);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.7f);
             _animator.SetBool("anim_dead", false);
             transform.position = originalPos;
         }
