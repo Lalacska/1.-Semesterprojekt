@@ -13,7 +13,7 @@ public class FishController : MonoBehaviour
     float movementX = 0;
     float movementY = 0;
     public bool inWater = false; // <-- track if fish is in water
-    bool dieTogether = false;
+    public bool dieTogether = false;
     bool _isFacingRight;
 
 
