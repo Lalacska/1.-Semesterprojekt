@@ -7,6 +7,7 @@ namespace PauseMenu
     {
         [SerializeField] GameObject pauseMenu;
         public bool isPaused;
+        
 
 
         public void Pause()
@@ -16,12 +17,14 @@ namespace PauseMenu
                 pauseMenu.SetActive(false);
                 Resume();
                 isPaused = false;
+                
             }
             else
             {
                 pauseMenu.SetActive(true);
                 isPaused = true;
                 Time.timeScale = 0;
+                
             }
         }
 
