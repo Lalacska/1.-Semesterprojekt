@@ -7381,6 +7381,7 @@ MonoBehaviour:
   - {fileID: 759349910}
   - {fileID: 1134455514}
   - {fileID: 463089332}
+  resetTimes: 1
 --- !u!4 &2091335761
 Transform:
   m_ObjectHideFlags: 0
