@@ -282,7 +282,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1192742375
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -1197,7 +1197,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -852815005
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -19620,6 +19620,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CompletedCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1812809282823488715, guid: 6ba2c9cba27e4364a99bc08760465e50, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4702893728290094271, guid: 6ba2c9cba27e4364a99bc08760465e50, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -19929,10 +19933,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc3dd7875bc511478b9e707c2621b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicMixer: {fileID: 8407677234570204625, guid: c436890c1ba0b1346a731d3046f8b0c2, type: 2}
-  melodySource: {fileID: 1658172194}
-  drumsSource: {fileID: 523181717}
-  enableDrums: 0
 --- !u!1 &1293419665
 GameObject:
   m_ObjectHideFlags: 0
@@ -20206,7 +20206,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -852815005
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -20564,7 +20564,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1964208967
-  m_SortingLayer: 10
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -21564,17 +21564,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundList:
   - name: Fish_Move
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: de59fc5e7a58b874b916cbccb32a62af, type: 3}
+    - {fileID: 8300000, guid: 7bed0593498d4da4a94ac1c6baeaa8a4, type: 3}
+    - {fileID: 8300000, guid: 2788a5b1f23a9494a8f2c29870f151cf, type: 3}
   - name: Robot_Walk
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: e63b8d7b3ad04524ba0141a5eab518f6, type: 3}
+    - {fileID: 8300000, guid: b9d305204bf3f304cb7a6a88c66fbe47, type: 3}
+    - {fileID: 8300000, guid: af548809b6128c24b9e462359c8151e6, type: 3}
+    - {fileID: 8300000, guid: b0520f4fa8fc5754890548072cce9679, type: 3}
   - name: Robot_Jump
     sounds: []
   - name: Robot_Land
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: 3c915011265013a49b37f9008fd6c51e, type: 3}
   - name: Robot_Death
-    sounds: []
+    sounds:
+    - {fileID: 8300000, guid: d59e50cb3f3accd4b8b293d3a33a345c, type: 3}
   - name: Lever
-    sounds: []
+    sounds:
+    - {fileID: 0}
   - name: Gate
     sounds: []
   - name: Platform

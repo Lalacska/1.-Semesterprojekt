@@ -38,6 +38,8 @@ public class FishController : MonoBehaviour
     public bool isGroundedInWater = false;
     private bool swimming;
 
+    bool isSoundPlaying = false;
+
     private void Awake()
     {
         isWinning = false;
@@ -201,6 +203,15 @@ public class FishController : MonoBehaviour
             transform.position = originalPos;
         }
     }
+
+    IEnumerator PlayFishSound()
+    {
+        isSoundPlaying = true;
+        SoundManager.PlaySound(SoundType.Fish_Move);
+        yield return new WaitForSeconds(2f);
+        isSoundPlaying = false;
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Platform") && inWater)
@@ -253,6 +264,11 @@ public class FishController : MonoBehaviour
         Debug.Log("Move!");
         // Convert the input value into a Vector2 for movement.
         Vector2 input = movementValue.Get<Vector2>();
+
+        if (!isSoundPlaying)
+        {
+            StartCoroutine(PlayFishSound());
+        }
 
         // Store the X and Y components of the movement.
         movementX = input.x;
