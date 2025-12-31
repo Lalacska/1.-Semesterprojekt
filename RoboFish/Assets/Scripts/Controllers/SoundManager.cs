@@ -53,6 +53,12 @@ public class SoundManager : MonoBehaviour
         instance.audioSource.PlayOneShot(randomClip, volume);
     }
 
+    public static AudioClip GetRandomClip(SoundType sound)
+    {
+        AudioClip[] clips = instance.soundList[(int)sound].Sounds;
+        return clips[UnityEngine.Random.Range(0, clips.Length)];
+    }
+
 #if UNITY_EDITOR
     private void OnEnable()
     {

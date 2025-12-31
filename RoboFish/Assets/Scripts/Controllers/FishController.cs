@@ -38,12 +38,16 @@ public class FishController : MonoBehaviour
     public bool isGroundedInWater = false;
     private bool swimming;
 
-    bool isSoundPlaying = false;
+    private AudioSource audioSource;
+
+
 
     private void Awake()
     {
         isWinning = false;
         Instance = this;
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.loop = true;
     }
 
     //Particle controller
@@ -64,6 +68,9 @@ public class FishController : MonoBehaviour
         {
             actionButtonPressed = false;
         }
+
+        HandleMovementSound();
+
         if (inWater && rb.linearVelocity.magnitude > 0.1f)
         {
             swimming = true;
@@ -74,6 +81,7 @@ public class FishController : MonoBehaviour
             swimming = false;
             _animator.SetBool("anim_swimming", false);
         }
+
     }
 
     private void FixedUpdate()
@@ -204,14 +212,6 @@ public class FishController : MonoBehaviour
         }
     }
 
-    IEnumerator PlayFishSound()
-    {
-        isSoundPlaying = true;
-        SoundManager.PlaySound(SoundType.Fish_Move);
-        yield return new WaitForSeconds(2f);
-        isSoundPlaying = false;
-    }
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Platform") && inWater)
@@ -245,6 +245,26 @@ public class FishController : MonoBehaviour
         return hit.collider != null;
     }
 
+
+    private void HandleMovementSound()
+    {
+        // Check if fish is moving in water
+        bool moving = inWater && rb.linearVelocity.magnitude > 0.1f;
+
+        // Play looped sound if moving
+        if (moving && !audioSource.isPlaying)
+        {
+            audioSource.clip = SoundManager.GetRandomClip(SoundType.Fish_Move);
+            audioSource.Play();
+        }
+        // Stop sound if not moving
+        else if (!moving && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+    }
+
+
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Platform") && inWater)
@@ -264,11 +284,6 @@ public class FishController : MonoBehaviour
         Debug.Log("Move!");
         // Convert the input value into a Vector2 for movement.
         Vector2 input = movementValue.Get<Vector2>();
-
-        if (!isSoundPlaying)
-        {
-            StartCoroutine(PlayFishSound());
-        }
 
         // Store the X and Y components of the movement.
         movementX = input.x;

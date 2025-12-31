@@ -57,7 +57,7 @@ public class NewRoboController : MonoBehaviour
     //Win condition
     public bool isWinning = false;
 
-    bool isSoundPlaying = false;
+    private AudioSource footstepSource;
 
     private void Awake()
     {
@@ -66,6 +66,11 @@ public class NewRoboController : MonoBehaviour
         Instance = this;
         _rb = GetComponent<Rigidbody2D>();
         originalPos = _rb.transform.position;
+
+        footstepSource = gameObject.AddComponent<AudioSource>();
+        footstepSource.loop = true;
+        footstepSource.playOnAwake = false;
+        footstepSource.spatialBlend = 0f; // 2D sound for player
     }
 
     private void Update()
@@ -77,6 +82,8 @@ public class NewRoboController : MonoBehaviour
         {
             actionButtonPressed = false;
         }
+
+        HandleFootstepSound();
     }
 
     private void FixedUpdate()
@@ -164,12 +171,25 @@ public class NewRoboController : MonoBehaviour
         }
     }
 
-    IEnumerator PlayFootStepsSound()
+    private void HandleFootstepSound()
     {
-        isSoundPlaying = true;
-        SoundManager.PlaySound(SoundType.Robot_Walk);
-        yield return new WaitForSeconds(1.5f);
-        isSoundPlaying = false;
+        // Determine if robot should play footsteps:
+        // - Speed above threshold
+        // - Optionally grounded
+        float speed = _rb.linearVelocity.magnitude;
+        bool moving = speed > 0.1f && _isGrounded;
+
+        // Play looped sound if moving
+        if (moving && !footstepSource.isPlaying)
+        {
+            footstepSource.clip = SoundManager.GetRandomClip(SoundType.Robot_Walk);
+            footstepSource.Play();
+        }
+        // Stop sound if not moving
+        else if (!moving && footstepSource.isPlaying)
+        {
+            footstepSource.Stop();
+        }
     }
 
     #region Movement
@@ -179,10 +199,6 @@ public class NewRoboController : MonoBehaviour
         {
             _animator.SetBool("IsRunning", true);
             TurnCheck(moveInput);
-            if (!isSoundPlaying)
-            {
-                StartCoroutine(PlayFootStepsSound());
-            }
 
             Vector2 targetVelocity = Vector2.zero;
             targetVelocity = new Vector2(moveInput.x, 05) * moveStats.maxWalkSpeed;
@@ -196,6 +212,8 @@ public class NewRoboController : MonoBehaviour
             _rb.linearVelocity = new Vector2(_moveVelocity.x, _rb.linearVelocity.y);
         }
     }
+
+
     void TurnCheck(Vector2 moveInput)
     {
         if(_isFacingRight && moveInput.x < 0)
