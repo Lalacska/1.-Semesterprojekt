@@ -36,6 +36,7 @@ public class LevelManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
+
     void Win()
     {
         string usedTime = timerScript.UsedTime();

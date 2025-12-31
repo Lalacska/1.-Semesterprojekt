@@ -57,6 +57,8 @@ public class NewRoboController : MonoBehaviour
     //Win condition
     public bool isWinning = false;
 
+    bool isSoundPlaying = false;
+
     private void Awake()
     {
         isWinning = false;
@@ -145,6 +147,7 @@ public class NewRoboController : MonoBehaviour
         if (dieTogether)
         {
             _animator.SetBool("anim_dead", true);
+            SoundManager.PlaySound(SoundType.Robot_Death);
             yield return new WaitForSeconds(0.7f);
             _animator.SetBool("anim_dead", false);
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -154,10 +157,19 @@ public class NewRoboController : MonoBehaviour
         else
         {
             _animator.SetBool("anim_dead", true);
+            SoundManager.PlaySound(SoundType.Robot_Death);
             yield return new WaitForSeconds(0.7f);
             _animator.SetBool("anim_dead", false);
             transform.position = originalPos;
         }
+    }
+
+    IEnumerator PlayFootStepsSound()
+    {
+        isSoundPlaying = true;
+        SoundManager.PlaySound(SoundType.Robot_Walk);
+        yield return new WaitForSeconds(1.5f);
+        isSoundPlaying = false;
     }
 
     #region Movement
@@ -167,6 +179,10 @@ public class NewRoboController : MonoBehaviour
         {
             _animator.SetBool("IsRunning", true);
             TurnCheck(moveInput);
+            if (!isSoundPlaying)
+            {
+                StartCoroutine(PlayFootStepsSound());
+            }
 
             Vector2 targetVelocity = Vector2.zero;
             targetVelocity = new Vector2(moveInput.x, 05) * moveStats.maxWalkSpeed;
