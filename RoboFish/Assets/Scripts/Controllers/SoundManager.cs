@@ -25,19 +25,19 @@ public class SoundManager : MonoBehaviour
     {
         instance = this;
 
-        SoundManager[] managers =
-            UnityEngine.Object.FindObjectsByType<SoundManager>(
-                FindObjectsInactive.Include,
-                FindObjectsSortMode.None
-            );
+        //SoundManager[] managers =
+        //    UnityEngine.Object.FindObjectsByType<SoundManager>(
+        //        FindObjectsInactive.Include,
+        //        FindObjectsSortMode.None
+        //    );
 
-        if (managers.Length > 1)
-        {
-            Destroy(gameObject);
-            return;
-        }
+        //if (managers.Length >= 2)
+        //{
+        //    Destroy(gameObject);
+        //    return;
+        //}
 
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
 
