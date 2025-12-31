@@ -14,6 +14,7 @@ public class LandingBurst : MonoBehaviour
         {
             foreach (ContactPoint2D contact in collision.contacts)
             {
+                SoundManager.PlaySound(SoundType.Robot_Land);
                 // contact.normal points *out* of the collider we hit
                 // for floor collisions, normal.y should be positive (pointing up)
                 if (contact.normal.y > 0.5f)
