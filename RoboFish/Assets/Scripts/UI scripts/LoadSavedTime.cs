@@ -14,18 +14,19 @@ public class LoadSavedTime : MonoBehaviour
 
     string levelName;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    const int RESET_VERSION = 1; // Increment this whenever you want to force a reset
+
+    void Awake()
     {
-
-#if (UNITY_EDITOR)
-        if (resetTimes)
+        // Check if the player has already gone through this reset
+        if (PlayerPrefs.GetInt("TimeResetVersion", 0) < RESET_VERSION)
         {
-            TimeReset();
+            TimeReset(); // Run the reset once
+            PlayerPrefs.SetInt("TimeResetVersion", RESET_VERSION); // Mark it as done
+            PlayerPrefs.Save();
         }
-#endif
-        TimeSetting();
 
+        TimeSetting(); // Load the times (new or old)
     }
 
     // Goes trough the levels to load the saved time for each of them
@@ -46,6 +47,8 @@ public class LoadSavedTime : MonoBehaviour
     {
         if (levelName != null)
         {
+
+            Debug.Log(levelName);
             string time = PlayerPrefs.GetString(levelName);
             if (PlayerPrefs.HasKey(levelName) && !string.IsNullOrEmpty(time))
             {
@@ -66,10 +69,13 @@ public class LoadSavedTime : MonoBehaviour
         foreach (var level in levels)
         {
             TMP_Text TimeText = level.GetComponentInChildren<TMP_Text>();
-            levelName = level.name;
+            string templevelName = level.name;
             TimeText.text = "00:00";
-            PlayerPrefs.SetString(levelName, $"00:00");
+            Debug.Log(templevelName);
+            PlayerPrefs.SetString(templevelName, $"00:00");
         }
+
+        PlayerPrefs.Save();
     }
 
 
