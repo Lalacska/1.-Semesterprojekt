@@ -64,6 +64,7 @@ public class GatePlatform : MonoBehaviour, IInteractable
     {
         if (!audioSource.isPlaying)
         {
+            audioSource.volume = SoundManager.Volume;
             audioSource.clip = SoundManager.GetRandomClip(SoundType.Gate);
             audioSource.Play();
         }

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 
 public class NewRoboController : MonoBehaviour
@@ -182,6 +183,7 @@ public class NewRoboController : MonoBehaviour
         // Play looped sound if moving
         if (moving && !footstepSource.isPlaying)
         {
+            footstepSource.volume = SoundManager.Volume;
             footstepSource.clip = SoundManager.GetRandomClip(SoundType.Robot_Walk);
             footstepSource.Play();
         }

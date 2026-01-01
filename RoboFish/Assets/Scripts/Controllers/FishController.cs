@@ -254,6 +254,7 @@ public class FishController : MonoBehaviour
         // Play looped sound if moving
         if (moving && !audioSource.isPlaying)
         {
+            audioSource.volume = SoundManager.Volume;
             audioSource.clip = SoundManager.GetRandomClip(SoundType.Fish_Move);
             audioSource.Play();
         }
