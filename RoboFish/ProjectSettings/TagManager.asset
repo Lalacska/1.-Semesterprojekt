@@ -7,8 +7,8 @@ TagManager:
   - Platform
   - Lever
   - Water
-  - DryPlatform
   - SpikeDeath
+  - WaterDeath
   layers:
   - Default
   - TransparentFX
@@ -17,7 +17,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Player
   - 
   - 
   - 
@@ -49,11 +49,26 @@ TagManager:
   - name: Background
     uniqueID: 3382234581
     locked: 0
-  - name: LevelLayer
-    uniqueID: 3442152291
+  - name: Particles
+    uniqueID: 1481881129
+    locked: 0
+  - name: Puddles
+    uniqueID: 1182215143
+    locked: 0
+  - name: Platforms
+    uniqueID: 1581785717
     locked: 0
   - name: Spikes
     uniqueID: 3102224921
+    locked: 0
+  - name: LevelLayer
+    uniqueID: 3442152291
+    locked: 0
+  - name: MIsc
+    uniqueID: 3200404143
+    locked: 0
+  - name: LevelLayer
+    uniqueID: 3442152291
     locked: 0
   - name: Player
     uniqueID: 3515880361
@@ -63,6 +78,9 @@ TagManager:
     locked: 0
   - name: BorderFade
     uniqueID: 1964208967
+    locked: 0
+  - name: UIText
+    uniqueID: 411597559
     locked: 0
   m_RenderingLayers:
   - Default

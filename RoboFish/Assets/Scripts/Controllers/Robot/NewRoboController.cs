@@ -1,13 +1,17 @@
+﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class NewRoboController : MonoBehaviour
 {
+    public static NewRoboController Instance { get; set; }
     [Header("References")]
     public RoboMovementStats moveStats;
     [SerializeField] private Collider2D _feetColl;
     [SerializeField] private Collider2D _bodyColl;
+    [SerializeField] public GameObject failedCanvas;
+    [SerializeField] private Animator _animator;
 
     private Rigidbody2D _rb;
 
@@ -51,12 +55,23 @@ public class NewRoboController : MonoBehaviour
     private IInteractable interactTarget;
     private bool actionButtonPressed = false;
 
+    //Win condition
+    public bool isWinning = false;
+
+    private AudioSource footstepSource;
+
     private void Awake()
     {
+        isWinning = false;
         _isFacingRight = true;
-
+        Instance = this;
         _rb = GetComponent<Rigidbody2D>();
         originalPos = _rb.transform.position;
+
+        footstepSource = gameObject.AddComponent<AudioSource>();
+        footstepSource.loop = true;
+        footstepSource.playOnAwake = false;
+        footstepSource.spatialBlend = 0f; // 2D sound for player
     }
 
     private void Update()
@@ -68,6 +83,8 @@ public class NewRoboController : MonoBehaviour
         {
             actionButtonPressed = false;
         }
+
+        HandleFootstepSound();
     }
 
     private void FixedUpdate()
@@ -82,6 +99,7 @@ public class NewRoboController : MonoBehaviour
         {
             Move(moveStats.airAcceleration, moveStats.airDeceleration, RoboInputManager.movement);
         }
+
     }
 
     private void OnAction()
@@ -105,7 +123,7 @@ public class NewRoboController : MonoBehaviour
             Debug.Log(interactTarget);
         }
 
-        if (collision.gameObject.CompareTag("Water"))
+        if (collision.gameObject.CompareTag("WaterDeath"))
         {
             Dead();
         }
@@ -128,13 +146,51 @@ public class NewRoboController : MonoBehaviour
 
     void Dead()
     {
+        _animator.SetBool("anim_dead", true);
+        StartCoroutine(DeathAnimation());
+    }
+    
+    IEnumerator DeathAnimation()
+    {
         if (dieTogether)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            _animator.SetBool("anim_dead", true);
+            SoundManager.PlaySound(SoundType.Robot_Death);
+            yield return new WaitForSeconds(0.7f);
+            _animator.SetBool("anim_dead", false);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            failedCanvas.SetActive(true);
+            Time.timeScale = 0;
         }
         else
         {
+            _animator.SetBool("anim_dead", true);
+            SoundManager.PlaySound(SoundType.Robot_Death);
+            yield return new WaitForSeconds(0.7f);
+            _animator.SetBool("anim_dead", false);
             transform.position = originalPos;
+        }
+    }
+
+    private void HandleFootstepSound()
+    {
+        // Determine if robot should play footsteps:
+        // - Speed above threshold
+        // - Optionally grounded
+        float speed = _rb.linearVelocity.magnitude;
+        bool moving = speed > 0.1f && _isGrounded;
+
+        // Play looped sound if moving
+        if (moving && !footstepSource.isPlaying)
+        {
+            footstepSource.volume = SoundManager.Volume;
+            footstepSource.clip = SoundManager.GetRandomClip(SoundType.Robot_Walk);
+            footstepSource.Play();
+        }
+        // Stop sound if not moving
+        else if (!moving && footstepSource.isPlaying)
+        {
+            footstepSource.Stop();
         }
     }
 
@@ -143,7 +199,7 @@ public class NewRoboController : MonoBehaviour
     {
        if(moveInput!= Vector2.zero)
         {
-
+            _animator.SetBool("IsRunning", true);
             TurnCheck(moveInput);
 
             Vector2 targetVelocity = Vector2.zero;
@@ -153,10 +209,13 @@ public class NewRoboController : MonoBehaviour
         }
        else if(moveInput == Vector2.zero)
         {
+            _animator.SetBool("IsRunning", false);
             _moveVelocity = Vector2.Lerp(_moveVelocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
             _rb.linearVelocity = new Vector2(_moveVelocity.x, _rb.linearVelocity.y);
         }
     }
+
+
     void TurnCheck(Vector2 moveInput)
     {
         if(_isFacingRight && moveInput.x < 0)
@@ -244,6 +303,7 @@ public class NewRoboController : MonoBehaviour
         if ((_isJumping|| _isFalling)&& _isGrounded&& verticalVelocity <= 0f)
         {
             _isJumping = false;
+            _animator.SetBool("anim_InAir", false);
             _isFalling = false;
             _isFastFalling = false;
             _fastFallTime = 0f;
@@ -258,6 +318,7 @@ public class NewRoboController : MonoBehaviour
         if (!_isJumping)
         {
             _isJumping = true;
+            _animator.SetBool("anim_InAir", true);
         }
 
         _jumpBufferTimer = 0f;
@@ -389,6 +450,20 @@ public class NewRoboController : MonoBehaviour
         else
         {
             _bumpedHead = false;
+        }
+    }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            isWinning = true;
+        }
+    }
+    public void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            isWinning = false;
         }
     }
     private void CollisionChecks()

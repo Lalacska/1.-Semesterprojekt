@@ -7,6 +7,7 @@ public class MovingPlatform : MonoBehaviour
     public float movespeed = 2;
     public float interval;
     private float timer;
+    public bool sticky = false;
 
     private Vector3 nextPosition;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -33,7 +34,7 @@ public class MovingPlatform : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && sticky)
         {
             collision.gameObject.transform.parent = transform;
         }

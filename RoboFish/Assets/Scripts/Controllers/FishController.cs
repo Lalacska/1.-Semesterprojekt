@@ -1,16 +1,21 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class FishController : MonoBehaviour
 {
+    public static FishController Instance { get; set; }
     Rigidbody2D rb;
 
     Vector3 originalPos;
     float movementX = 0;
     float movementY = 0;
     public bool inWater = false; // <-- track if fish is in water
-    bool dieTogether = false;
+    public bool dieTogether = false;
+    bool _isFacingRight;
+
 
     [SerializeField] private float moveForce = 10f;
     [SerializeField] private float jumpForce = 2f;
@@ -19,11 +24,35 @@ public class FishController : MonoBehaviour
     [SerializeField] private float airDrag = 0.5f;
     [SerializeField] private float maxSpeed = 5f;
     [SerializeField] private float sinkingForce = 5f;
+    [SerializeField] private Animator _animator;
 
+    [SerializeField] public GameObject failedCanvas;
     //Lever controlls
     LeverController currentLever;
     private IInteractable interactTarget;
     private bool actionButtonPressed = false;
+
+    //Win Condition
+    public bool isWinning = false;
+
+    public bool isGroundedInWater = false;
+    private bool swimming;
+
+    private AudioSource audioSource;
+
+
+
+    private void Awake()
+    {
+        isWinning = false;
+        Instance = this;
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.loop = true;
+    }
+
+    //Particle controller
+    [SerializeField]
+    ParticleSystem part;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,6 +68,20 @@ public class FishController : MonoBehaviour
         {
             actionButtonPressed = false;
         }
+
+        HandleMovementSound();
+
+        if (inWater && rb.linearVelocity.magnitude > 0.1f)
+        {
+            swimming = true;
+            _animator.SetBool("anim_swimming", true);
+        }
+        else
+        {
+            swimming = false;
+            _animator.SetBool("anim_swimming", false);
+        }
+
     }
 
     private void FixedUpdate()
@@ -53,11 +96,18 @@ public class FishController : MonoBehaviour
             // Calculate the difference between current velocity and desired velocity
             Vector2 velocityChange = desiredVelocity - rb.linearVelocity;
 
-            // Apply only the needed force to move toward desired velocity
-            rb.AddForce(velocityChange * moveForceWater * Time.fixedDeltaTime, ForceMode2D.Force);
+            if (input.sqrMagnitude > 0.001f || !isGroundedInWater)
+            {
+                rb.AddForce(velocityChange * moveForceWater * Time.fixedDeltaTime, ForceMode2D.Force);
+            }
+            else if (isGroundedInWater)
+            {
+                // HARD STOP when resting
+                rb.linearVelocity = Vector2.zero;
+            }
 
             // Gentle sinking when not pressing up
-            if (movementY <= 0.01f)
+            if (movementY <= 0.01f && !isGroundedInWater)
             {
                 rb.AddForce(Vector2.down * sinkingForce, ForceMode2D.Force);
             }
@@ -72,11 +122,24 @@ public class FishController : MonoBehaviour
             Vector2 velocityChange = desiredVelocity - rb.linearVelocity;
             rb.AddForce(velocityChange * moveForce * Time.fixedDeltaTime, ForceMode2D.Force);
         }
+
+
+        // Particle handling
+        if (part == null) return;
+
+        ParticleSystem.EmissionModule emission = part.emission;
+
+        bool shouldEmit =
+            inWater &&
+            !isGroundedInWater &&
+            rb.linearVelocity.magnitude > 0.1f;
+
+        emission.enabled = shouldEmit;
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("a");
         if (other.CompareTag("Water"))
         {
             rb.gravityScale = 0f;
@@ -84,10 +147,6 @@ public class FishController : MonoBehaviour
 
             rb.linearVelocity *= 0.5f;
             rb.linearDamping = waterDrag;
-        }
-        if (other.CompareTag("Platform") && !other.CompareTag("Water"))
-        {
-            Debug.Log("I died?");
         }
         if (other.CompareTag("SpikeDeath"))
         {
@@ -130,14 +189,93 @@ public class FishController : MonoBehaviour
 
     void Dead()
     {
+        _animator.SetBool("anim_dead", true);
+        StartCoroutine(DeathAnimation());
+    }
+    IEnumerator DeathAnimation()
+    {
         if (dieTogether)
         {
-            //SceneManager.LoadScene("Test2");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            _animator.SetBool("anim_dead", true);
+            yield return new WaitForSeconds(0.7f);
+            _animator.SetBool("anim_dead", false);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            failedCanvas.SetActive(true);
+            Time.timeScale = 0;
         }
         else
         {
+            _animator.SetBool("anim_dead", true);
+            yield return new WaitForSeconds(0.7f);
+            _animator.SetBool("anim_dead", false);
             transform.position = originalPos;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Platform") && inWater)
+        {
+            if (CheckGrounded())
+            {
+                isGroundedInWater = true;
+            }
+        }
+
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            isWinning = true;
+        }
+    }
+
+    // Simple ground check using a small raycast
+    bool CheckGrounded()
+    {
+        CircleCollider2D col = GetComponent<CircleCollider2D>();
+        if (col == null) return false;
+
+        // start a little above the bottom of the circle
+        Vector2 origin = new Vector2(transform.position.x, transform.position.y - col.radius + 0.01f);
+        float distance = 0.05f; // how far below to check
+        LayerMask groundMask = LayerMask.GetMask("Ground");
+
+        RaycastHit2D hit = Physics2D.Raycast(origin, Vector2.down, distance, groundMask);
+        Debug.DrawRay(origin, Vector2.down * distance, Color.red); // visualize in Scene view
+
+        return hit.collider != null;
+    }
+
+
+    private void HandleMovementSound()
+    {
+        // Check if fish is moving in water
+        bool moving = inWater && rb.linearVelocity.magnitude > 0.1f;
+
+        // Play looped sound if moving
+        if (moving && !audioSource.isPlaying)
+        {
+            audioSource.volume = SoundManager.Volume;
+            audioSource.clip = SoundManager.GetRandomClip(SoundType.Fish_Move);
+            audioSource.Play();
+        }
+        // Stop sound if not moving
+        else if (!moving && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+    }
+
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Platform") && inWater)
+        {
+            isGroundedInWater = false;
+        }
+
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            isWinning = false;
         }
     }
 
@@ -151,8 +289,11 @@ public class FishController : MonoBehaviour
         // Store the X and Y components of the movement.
         movementX = input.x;
         movementY = input.y;
+        TurnCheck(movementX, movementY);
+
     }
 
+    // This function is called when action button is pushed
     void OnAction()
     {
         if (!actionButtonPressed)
@@ -162,4 +303,68 @@ public class FishController : MonoBehaviour
             interactTarget?.Interact();
         }
     }
+
+    void TurnCheck(float directionX, float directionY)
+    {
+
+        if (directionX > 0)
+        {
+            _isFacingRight = true;
+            if (directionY > 0)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 20);
+            }
+            else if (directionY < 0)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, -20);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+        }
+        else if (directionX < 0)
+        {
+            _isFacingRight = false;
+            if (directionY > 0)
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 20);
+            }
+            else if (directionY < 0)
+            {
+                transform.rotation = Quaternion.Euler(0, 180, -20);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+        }
+        else if (directionX == 0)
+        {
+            if (directionY > 0)
+            {
+                if (_isFacingRight)
+                    transform.rotation = Quaternion.Euler(0, 0, 20);
+                else
+                    transform.rotation = Quaternion.Euler(0, 180, 20);
+            }
+            else if (directionY < 0)
+            {
+                if (_isFacingRight)
+                    transform.rotation = Quaternion.Euler(0, 0, -20);
+                else
+                    transform.rotation = Quaternion.Euler(0, 180, -20);
+            }
+            else
+            {
+                if (_isFacingRight)
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                else
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+        }
+    }
 }
+
+
+

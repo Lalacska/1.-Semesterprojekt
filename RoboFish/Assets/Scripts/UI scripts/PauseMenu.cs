@@ -8,19 +8,29 @@ namespace PauseMenu
         [SerializeField] GameObject pauseMenu;
         public bool isPaused;
 
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Restart();
+            }
+        }
 
         public void Pause()
         {
             if (isPaused)
             {
                 pauseMenu.SetActive(false);
+                Resume();
                 isPaused = false;
+                
             }
             else
             {
                 pauseMenu.SetActive(true);
                 isPaused = true;
                 Time.timeScale = 0;
+                
             }
         }
 
