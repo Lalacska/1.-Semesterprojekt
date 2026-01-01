@@ -57,7 +57,6 @@ public class LeverController : MonoBehaviour, IInteractable
         }
         Debug.Log("Lever Flipped");
         foreach (var gate in Gates) {
-            SoundManager.PlaySound(SoundType.Gate);
             gate.Interact();
         }
     }
