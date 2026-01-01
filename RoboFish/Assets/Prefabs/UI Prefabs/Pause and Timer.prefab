@@ -597,7 +597,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7473904363975529180}
+        m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
+        m_MethodName: SetMusicVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3273356342730724025
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,7 +990,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7473904363975529180}
+        m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
+        m_MethodName: SetSFXVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4586247817260069986
 GameObject:
   m_ObjectHideFlags: 0
@@ -2230,13 +2254,36 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 417425526551000799, guid: 52d6c70ff27cea44ab4c3c8b1874670a, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8760660913841755561, guid: 52d6c70ff27cea44ab4c3c8b1874670a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7473904363975529180}
   m_SourcePrefab: {fileID: 100100000, guid: 52d6c70ff27cea44ab4c3c8b1874670a, type: 3}
 --- !u!224 &3817612069840590847 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3446960077139129516, guid: 52d6c70ff27cea44ab4c3c8b1874670a, type: 3}
   m_PrefabInstance: {fileID: 1958201751047971667}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7113700256561035002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8760660913841755561, guid: 52d6c70ff27cea44ab4c3c8b1874670a, type: 3}
+  m_PrefabInstance: {fileID: 1958201751047971667}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7473904363975529180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7113700256561035002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fb127f0c7c17f418a7a221ab4b6a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMixer: {fileID: 24100000, guid: c436890c1ba0b1346a731d3046f8b0c2, type: 2}
+  musicSlider: {fileID: 6734787397145814300}
+  SFXSlider: {fileID: 1762483364223154058}
 --- !u!1001 &4732000311983490319
 PrefabInstance:
   m_ObjectHideFlags: 0

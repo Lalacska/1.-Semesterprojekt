@@ -3293,6 +3293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myMixer: {fileID: 24100000, guid: c436890c1ba0b1346a731d3046f8b0c2, type: 2}
   musicSlider: {fileID: 672440271}
+  SFXSlider: {fileID: 1646862070}
 --- !u!1 &695340709
 GameObject:
   m_ObjectHideFlags: 0
@@ -6287,10 +6288,10 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: VolumeControlSlider, Assembly-CSharp
+      - m_Target: {fileID: 682640221}
+        m_TargetAssemblyTypeName: VolumeSettings, Assembly-CSharp
         m_MethodName: SetSFXVolume
-        m_Mode: 4
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
