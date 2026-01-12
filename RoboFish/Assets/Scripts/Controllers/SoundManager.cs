@@ -24,20 +24,6 @@ public class SoundManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-
-        //SoundManager[] managers =
-        //    UnityEngine.Object.FindObjectsByType<SoundManager>(
-        //        FindObjectsInactive.Include,
-        //        FindObjectsSortMode.None
-        //    );
-
-        //if (managers.Length >= 2)
-        //{
-        //    Destroy(gameObject);
-        //    return;
-        //}
-
-        //DontDestroyOnLoad(gameObject);
     }
 
 
