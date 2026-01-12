@@ -21,22 +21,46 @@ public class SoundManager : MonoBehaviour
     private static SoundManager instance;
     private AudioSource audioSource;
 
+    private float volume = 1;
+    public static float Volume
+    {
+        get
+        {
+            return instance != null ? instance.volume : 1f;
+        }
+    }
+
     private void Awake()
     {
         instance = this;
     }
-
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
 
-    public static void PlaySound(SoundType sound, float  volume = 1)
+    public static void SetVolume(float volume = 1f)
+    {
+        if (instance == null)
+        {
+            Debug.LogWarning("SoundManager instance not found");
+            return;
+        }
+
+        instance.SetVolumeInternal(volume);
+    }
+
+    private void SetVolumeInternal(float volume)
+    {
+        this.volume = volume;
+    }
+
+    public static void PlaySound(SoundType sound)
     {
         AudioClip[] clips = instance.soundList[(int)sound].Sounds;
         AudioClip randomClip = clips[UnityEngine.Random.Range(0, clips.Length)];
-        instance.audioSource.PlayOneShot(randomClip, volume);
+        instance.audioSource.PlayOneShot(randomClip, instance.volume);
     }
 
     public static AudioClip GetRandomClip(SoundType sound)

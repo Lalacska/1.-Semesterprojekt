@@ -55,6 +55,9 @@ TagManager:
   - name: Puddles
     uniqueID: 1182215143
     locked: 0
+  - name: MIsc
+    uniqueID: 3200404143
+    locked: 0
   - name: Platforms
     uniqueID: 1581785717
     locked: 0
@@ -63,9 +66,6 @@ TagManager:
     locked: 0
   - name: LevelLayer
     uniqueID: 3442152291
-    locked: 0
-  - name: MIsc
-    uniqueID: 3200404143
     locked: 0
   - name: LevelLayer
     uniqueID: 3442152291
